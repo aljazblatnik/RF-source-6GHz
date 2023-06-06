@@ -1,0 +1,545 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-exit.o)
+                              c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o (exit)
+c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-impure.o)
+                              c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-exit.o) (_global_impure_ptr)
+c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-init.o)
+                              c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o (__libc_init_array)
+c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-memset.o)
+                              c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o (memset)
+c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
+                              c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-exit.o) (_exit)
+c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
+                              C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o (__aeabi_uidiv)
+c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
+                              C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o (__aeabi_idiv)
+c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+                              c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+
+Allocating common symbols
+Common symbol       size              file
+
+MAX2871_reg         0x24              obj\release\src\max2871.o (symbol from plugin)
+memory              0x78              obj\release\src\main.o (symbol from plugin)
+buffer              0x14              obj\release\src\main.o (symbol from plugin)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crti.o
+ .data          0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crti.o
+ .bss           0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crti.o
+ .data          0x00000000        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
+ .data          0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+ .bss           0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+ .ARM.extab     0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+ .text          0x00000000        0x0 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .data          0x00000000        0x0 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .bss           0x00000000        0x0 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .data.AHBPrescTable
+                0x00000000       0x10 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .comment       0x00000000       0x4d C:\Users\Aljaz\AppData\Local\Temp\ccgD1G6g.debug.temp.o
+ .comment       0x00000000       0x4d C:\Users\Aljaz\AppData\Local\Temp\ccktCBcV.debug.temp.o
+ .comment       0x00000000       0x4d C:\Users\Aljaz\AppData\Local\Temp\ccojdwiz.debug.temp.o
+ .comment       0x00000000       0x4d C:\Users\Aljaz\AppData\Local\Temp\ccs9Nqod.debug.temp.o
+ .comment       0x00000000       0x4d C:\Users\Aljaz\AppData\Local\Temp\ccwZoluR.debug.temp.o
+ .debug_info    0x00000000      0xb2b C:\Users\Aljaz\AppData\Local\Temp\ccAPZfAv.debug.temp.o
+ .debug_abbrev  0x00000000      0x22f C:\Users\Aljaz\AppData\Local\Temp\ccAPZfAv.debug.temp.o
+ .debug_line    0x00000000      0x1e2 C:\Users\Aljaz\AppData\Local\Temp\ccAPZfAv.debug.temp.o
+ .debug_str     0x00000000      0x70d C:\Users\Aljaz\AppData\Local\Temp\ccAPZfAv.debug.temp.o
+ .comment       0x00000000       0x4d C:\Users\Aljaz\AppData\Local\Temp\ccAPZfAv.debug.temp.o
+ .comment       0x00000000       0x4d C:\Users\Aljaz\AppData\Local\Temp\ccgHlFZc.debug.temp.o
+ .comment       0x00000000       0x4d C:\Users\Aljaz\AppData\Local\Temp\ccWyH4oU.debug.temp.o
+ .comment       0x00000000       0x4d C:\Users\Aljaz\AppData\Local\Temp\ccCq3tOB.debug.temp.o
+ .comment       0x00000000       0x4d C:\Users\Aljaz\AppData\Local\Temp\cciipTdj.debug.temp.o
+ .comment       0x00000000       0x4d C:\Users\Aljaz\AppData\Local\Temp\ccY9KiD0.debug.temp.o
+ .comment       0x00000000       0x4d C:\Users\Aljaz\AppData\Local\Temp\ccE16H2H.debug.temp.o
+ .data          0x00000000        0x0 obj\release\src\startup_stm32f0xx.o
+ .bss           0x00000000        0x0 obj\release\src\startup_stm32f0xx.o
+ .text          0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-exit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-exit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-impure.o)
+ .data          0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x00000000        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-impure.o)
+ .text          0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-init.o)
+ .data          0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-init.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-init.o)
+ .text          0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-memset.o)
+ .text          0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
+ .text          0x00000000      0x114 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
+ .debug_frame   0x00000000       0x20 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x00000000       0x1e c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+ .text          0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtend.o
+ .data          0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtend.o
+ .bss           0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtend.o
+ .text          0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtn.o
+ .data          0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtn.o
+ .bss           0x00000000        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ROM              0x08000000         0x00007c00         xr
+RAM              0x20000000         0x00001000         xrw
+MEM              0x08007c00         0x00000400         xr
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crti.o
+LOAD c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
+LOAD c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+                0x00000000                __HEAP_SIZE = 0x0
+                0x00000100                __STACK_SIZE = 0x100
+
+.mem            0x08007c00       0x78
+                0x08007c00                . = ALIGN (0x4)
+ *(.mem)
+ .mem           0x08007c00       0x78 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+                0x08007c78                . = ALIGN (0x4)
+
+.text           0x08000000     0x3ba0
+ *(.isr_vector)
+ .isr_vector    0x08000000       0xc4 obj\release\src\startup_stm32f0xx.o
+                0x08000000                __isr_vector
+ *(.text*)
+ .text          0x080000c4       0x48 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
+ .text          0x0800010c       0x80 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+                0x0800010c                _stack_init
+                0x08000118                _start
+                0x08000118                _mainCRTStartup
+ .text.string_to_int
+                0x0800018c       0x88 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .text.int_to_dec_string
+                0x08000214       0x60 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .text.usart_send_report
+                0x08000274      0x158 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .text.usart_send_string
+                0x080003cc       0x28 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .text.flashWriteChanges
+                0x080003f4      0x134 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .text.send4bits
+                0x08000528       0xb4 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .text.delay_us
+                0x080005dc       0x68 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .text.send_MAX2871
+                0x08000644       0xac C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .text.lcdSendCommand
+                0x080006f0       0x34 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .text.lcdPositionXY
+                0x08000724       0x30 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .text.lcdSendData
+                0x08000754       0x34 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .text.menuShowFrequency
+                0x08000788       0xf0 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .text.lcdWriteString
+                0x08000878       0x38 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .text.delay_ms
+                0x080008b0       0x30 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .text.lcdDisplayClear
+                0x080008e0       0x10 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .text.calibrationReturnPower
+                0x080008f0       0x50 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .text.attenuator_send
+                0x08000940       0x74 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .text.menuShow
+                0x080009b4      0x4cc C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .text.SystemInit
+                0x08000e80       0xb8 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+                0x08000e80                SystemInit
+ .text.startup.main
+                0x08000f38      0xd70 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+                0x08000f38                main
+ .text          0x08001ca8       0xa0 obj\release\src\startup_stm32f0xx.o
+                0x08001ca8                Reset_Handler
+                0x08001cf2                NMI_Handler
+                0x08001cf4                HardFault_Handler
+                0x08001cf6                SVC_Handler
+                0x08001cf8                PendSV_Handler
+                0x08001cfa                SysTick_Handler
+                0x08001cfc                Default_Handler
+                0x08001cfe                WWDG_IRQHandler
+                0x08001d00                PVD_IRQHandler
+                0x08001d02                RTC_IRQHandler
+                0x08001d04                FLASH_IRQHandler
+                0x08001d06                RCC_IRQHandler
+                0x08001d08                EXTI0_1_IRQHandler
+                0x08001d0a                EXTI2_3_IRQHandler
+                0x08001d0c                EXTI4_15_IRQHandler
+                0x08001d0e                TS_IRQHandler
+                0x08001d10                DMA1_Channel1_IRQHandler
+                0x08001d12                DMA1_Channel2_3_IRQHandler
+                0x08001d14                DMA1_Channel4_5_IRQHandler
+                0x08001d16                ADC1_COMP_IRQHandler
+                0x08001d18                TIM1_BRK_UP_TRG_COM_IRQHandler
+                0x08001d1a                TIM1_CC_IRQHandler
+                0x08001d1c                TIM2_IRQHandler
+                0x08001d1e                TIM3_IRQHandler
+                0x08001d20                TIM6_DAC_IRQHandler
+                0x08001d22                TIM7_IRQHandler
+                0x08001d24                TIM14_IRQHandler
+                0x08001d26                TIM15_IRQHandler
+                0x08001d28                TIM16_IRQHandler
+                0x08001d2a                TIM17_IRQHandler
+                0x08001d2c                I2C1_IRQHandler
+                0x08001d2e                I2C2_IRQHandler
+                0x08001d30                SPI1_IRQHandler
+                0x08001d32                SPI2_IRQHandler
+                0x08001d34                USART1_IRQHandler
+                0x08001d36                USART2_IRQHandler
+                0x08001d38                USART3_4_IRQHandler
+                0x08001d3a                CEC_IRQHandler
+                0x08001d3c                USB_IRQHandler
+                0x08001d3e                BootRAM
+ .text.exit     0x08001d48       0x2c c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-exit.o)
+                0x08001d48                exit
+ .text.__libc_init_array
+                0x08001d74       0x48 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-init.o)
+                0x08001d74                __libc_init_array
+ .text.memset   0x08001dbc       0x10 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-memset.o)
+                0x08001dbc                memset
+ .text._exit    0x08001dcc        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
+                0x08001dcc                _exit
+ .text          0x08001dd0      0x1d4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
+                0x08001dd0                __divsi3
+                0x08001dd0                __aeabi_idiv
+                0x08001f9c                __aeabi_idivmod
+ .text          0x08001fa4        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+                0x08001fa4                __aeabi_idiv0
+                0x08001fa4                __aeabi_ldiv0
+ *(.init)
+ .init          0x08001fa8        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crti.o
+                0x08001fa8                _init
+ .init          0x08001fac        0x8 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtn.o
+ *(.fini)
+ .fini          0x08001fb4        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crti.o
+                0x08001fb4                _fini
+ .fini          0x08001fb8        0x8 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtn.o
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+ *(.rodata*)
+ .rodata.string_to_int.str1.4
+                0x08001fc0        0xb C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ *fill*         0x08001fcb        0x1 
+ .rodata.usart_send_report.str1.4
+                0x08001fcc       0x15 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ *fill*         0x08001fe1        0x3 
+ .rodata.menuShow.str1.4
+                0x08001fe4       0x18 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .rodata.main.str1.4
+                0x08001ffc      0x166 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ *fill*         0x08002162        0x2 
+ .rodata.main   0x08002164       0xe8 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .rodata.calibrationMax
+                0x0800224c     0x194c C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .rodata._global_impure_ptr
+                0x08003b98        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-impure.o)
+                0x08003b98                _global_impure_ptr
+ *(.eh_frame*)
+ .eh_frame      0x08003b9c        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
+ .eh_frame      0x08003b9c        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtend.o
+
+.glue_7         0x08003ba0        0x0
+ .glue_7        0x08003ba0        0x0 linker stubs
+
+.glue_7t        0x08003ba0        0x0
+ .glue_7t       0x08003ba0        0x0 linker stubs
+
+.vfp11_veneer   0x08003ba0        0x0
+ .vfp11_veneer  0x08003ba0        0x0 linker stubs
+
+.v4_bx          0x08003ba0        0x0
+ .v4_bx         0x08003ba0        0x0 linker stubs
+
+.iplt           0x08003ba0        0x0
+ .iplt          0x08003ba0        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x08003ba0                __exidx_start = .
+
+.ARM.exidx      0x08003ba0        0x8
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx     0x08003ba0        0x8 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+                                 0x10 (size before relaxing)
+                0x08003ba8                __exidx_end = .
+                0x08003ba8                __etext = .
+
+.rel.dyn        0x08003ba8        0x0
+ .rel.iplt      0x08003ba8        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
+
+.data           0x20000000       0x68 load address 0x08003ba8
+                0x20000000                __data_start__ = .
+ *(vtable)
+ *(.data*)
+ .data.impure_data
+                0x20000000       0x60 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-impure.o)
+                0x20000060                . = ALIGN (0x4)
+                0x20000060                PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                0x20000060                PROVIDE (__preinit_array_end = .)
+                0x20000060                . = ALIGN (0x4)
+                0x20000060                PROVIDE (__init_array_start = .)
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array)
+ .init_array    0x20000060        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x20000064                PROVIDE (__init_array_end = .)
+                0x20000064                . = ALIGN (0x4)
+                [!provide]                PROVIDE (__fini_array_start = .)
+ *(SORT_BY_NAME(.fini_array.*))
+ *(.fini_array)
+ .fini_array    0x20000064        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
+                [!provide]                PROVIDE (__fini_array_end = .)
+                0x20000068                . = ALIGN (0x4)
+                0x20000068                __data_end__ = .
+
+.igot.plt       0x20000068        0x0 load address 0x08003c10
+ .igot.plt      0x20000068        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
+
+.bss            0x20000068       0xf4 load address 0x08003c10
+                0x20000068                __bss_start__ = .
+ *(.bss*)
+ .bss           0x20000068       0x1c c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
+ .bss.MAX2871_reg
+                0x20000084       0x24 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .bss.buff_index
+                0x200000a8        0x4 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .bss.buffer    0x200000ac       0x14 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .bss.cursor    0x200000c0        0x4 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .bss.decode_command
+                0x200000c4        0x4 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .bss.frequency
+                0x200000c8        0x4 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .bss.frequency_flash
+                0x200000cc        0x4 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .bss.frequency_output
+                0x200000d0        0x4 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .bss.memory    0x200000d4       0x78 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .bss.modulation
+                0x2000014c        0x4 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .bss.power     0x20000150        0x4 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .bss.program   0x20000154        0x4 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .bss.status_change
+                0x20000158        0x4 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ *(COMMON)
+                0x2000015c                __bss_end__ = .
+
+.heap           0x20000160        0x0
+                0x20000160                __end__ = .
+                0x20000160                end = __end__
+ *(.heap*)
+ .heap          0x20000160        0x0 obj\release\src\startup_stm32f0xx.o
+                0x20000160                __HeapLimit = .
+
+.stack_dummy    0x20000160      0x100
+ *(.stack)
+ .stack         0x20000160      0x100 obj\release\src\startup_stm32f0xx.o
+                0x20001000                __StackTop = (ORIGIN (RAM) + LENGTH (RAM))
+                0x20000f00                __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
+                0x20001000                PROVIDE (__stack = __StackTop)
+                0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region RAM overflowed with stack)
+LOAD obj\release\src\attenuator.o
+LOAD C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+LOAD C:\Users\Aljaz\AppData\Local\Temp\ccgD1G6g.debug.temp.o
+LOAD C:\Users\Aljaz\AppData\Local\Temp\ccktCBcV.debug.temp.o
+LOAD C:\Users\Aljaz\AppData\Local\Temp\ccojdwiz.debug.temp.o
+LOAD C:\Users\Aljaz\AppData\Local\Temp\ccs9Nqod.debug.temp.o
+LOAD C:\Users\Aljaz\AppData\Local\Temp\ccwZoluR.debug.temp.o
+LOAD C:\Users\Aljaz\AppData\Local\Temp\ccAPZfAv.debug.temp.o
+LOAD C:\Users\Aljaz\AppData\Local\Temp\ccgHlFZc.debug.temp.o
+LOAD C:\Users\Aljaz\AppData\Local\Temp\ccWyH4oU.debug.temp.o
+LOAD C:\Users\Aljaz\AppData\Local\Temp\ccCq3tOB.debug.temp.o
+LOAD C:\Users\Aljaz\AppData\Local\Temp\cciipTdj.debug.temp.o
+LOAD C:\Users\Aljaz\AppData\Local\Temp\ccY9KiD0.debug.temp.o
+LOAD C:\Users\Aljaz\AppData\Local\Temp\ccE16H2H.debug.temp.o
+LOAD obj\release\src\calibration.o
+LOAD obj\release\src\delay.o
+LOAD obj\release\src\display.o
+LOAD obj\release\src\flash.o
+LOAD obj\release\src\lcd.o
+LOAD obj\release\src\main.o
+LOAD obj\release\src\max2871.o
+LOAD obj\release\src\menu.o
+LOAD obj\release\src\modulation.o
+LOAD obj\release\src\startup_stm32f0xx.o
+LOAD obj\release\src\system_stm32f0xx.o
+LOAD obj\release\src\usart.o
+START GROUP
+LOAD c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a
+LOAD c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a
+LOAD c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a
+END GROUP
+START GROUP
+LOAD c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a
+LOAD c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a
+LOAD c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a
+END GROUP
+START GROUP
+LOAD c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a
+LOAD c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a
+LOAD c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a
+END GROUP
+LOAD c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtend.o
+LOAD c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtn.o
+OUTPUT(bin\Release\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf elf32-littlearm)
+LOAD linker stubs
+
+.ARM.attributes
+                0x00000000       0x28
+ .ARM.attributes
+                0x00000000       0x1e c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crti.o
+ .ARM.attributes
+                0x0000001e       0x2c c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
+ .ARM.attributes
+                0x0000004a       0x1b c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+ .ARM.attributes
+                0x00000065       0x2a C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .ARM.attributes
+                0x0000008f       0x1b obj\release\src\startup_stm32f0xx.o
+ .ARM.attributes
+                0x000000aa       0x2c c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-exit.o)
+ .ARM.attributes
+                0x000000d6       0x2c c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x00000102       0x2c c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x0000012e       0x2c c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x0000015a       0x2c c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
+ .ARM.attributes
+                0x00000186       0x1e c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
+ .ARM.attributes
+                0x000001a4       0x1e c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x000001c2       0x2c c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtend.o
+ .ARM.attributes
+                0x000001ee       0x1e c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtn.o
+
+.comment        0x00000000       0x4c
+ .comment       0x00000000       0x4c C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+                                 0x4d (size before relaxing)
+
+.debug_info     0x00000000     0x8062
+ .debug_info    0x00000000     0x24b1 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .debug_info    0x000024b1      0x192 C:\Users\Aljaz\AppData\Local\Temp\ccgD1G6g.debug.temp.o
+                0x000024b1                attenuator.c.06dbddf4
+ .debug_info    0x00002643      0x1ce C:\Users\Aljaz\AppData\Local\Temp\ccktCBcV.debug.temp.o
+                0x00002643                calibration.c.9425e951
+ .debug_info    0x00002811      0xba2 C:\Users\Aljaz\AppData\Local\Temp\ccojdwiz.debug.temp.o
+                0x00002811                delay.c.061503aa
+ .debug_info    0x000033b3      0xab5 C:\Users\Aljaz\AppData\Local\Temp\ccs9Nqod.debug.temp.o
+                0x000033b3                display.c.8f4b3155
+ .debug_info    0x00003e68      0xb0f C:\Users\Aljaz\AppData\Local\Temp\ccwZoluR.debug.temp.o
+                0x00003e68                flash.c.bf05a585
+ .debug_info    0x00004977      0xfba C:\Users\Aljaz\AppData\Local\Temp\ccgHlFZc.debug.temp.o
+                0x00004977                main.c.d62fe0ce
+ .debug_info    0x00005931      0x2de C:\Users\Aljaz\AppData\Local\Temp\ccWyH4oU.debug.temp.o
+                0x00005931                max2871.c.9054b033
+ .debug_info    0x00005c0f      0x2a8 C:\Users\Aljaz\AppData\Local\Temp\ccCq3tOB.debug.temp.o
+                0x00005c0f                menu.c.303f3dba
+ .debug_info    0x00005eb7      0xf24 C:\Users\Aljaz\AppData\Local\Temp\cciipTdj.debug.temp.o
+                0x00005eb7                modulation.c.5ccd1f37
+ .debug_info    0x00006ddb      0x293 C:\Users\Aljaz\AppData\Local\Temp\ccY9KiD0.debug.temp.o
+                0x00006ddb                system_stm32f0xx.c.2ae9a362
+ .debug_info    0x0000706e      0xfce C:\Users\Aljaz\AppData\Local\Temp\ccE16H2H.debug.temp.o
+                0x0000706e                usart.c.41829d93
+ .debug_info    0x0000803c       0x26 obj\release\src\startup_stm32f0xx.o
+
+.debug_abbrev   0x00000000     0x1656
+ .debug_abbrev  0x00000000      0x1f7 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .debug_abbrev  0x000001f7      0x125 C:\Users\Aljaz\AppData\Local\Temp\ccgD1G6g.debug.temp.o
+ .debug_abbrev  0x0000031c       0xd5 C:\Users\Aljaz\AppData\Local\Temp\ccktCBcV.debug.temp.o
+ .debug_abbrev  0x000003f1      0x20b C:\Users\Aljaz\AppData\Local\Temp\ccojdwiz.debug.temp.o
+ .debug_abbrev  0x000005fc      0x23e C:\Users\Aljaz\AppData\Local\Temp\ccs9Nqod.debug.temp.o
+ .debug_abbrev  0x0000083a      0x22d C:\Users\Aljaz\AppData\Local\Temp\ccwZoluR.debug.temp.o
+ .debug_abbrev  0x00000a67      0x29b C:\Users\Aljaz\AppData\Local\Temp\ccgHlFZc.debug.temp.o
+ .debug_abbrev  0x00000d02      0x15c C:\Users\Aljaz\AppData\Local\Temp\ccWyH4oU.debug.temp.o
+ .debug_abbrev  0x00000e5e      0x142 C:\Users\Aljaz\AppData\Local\Temp\ccCq3tOB.debug.temp.o
+ .debug_abbrev  0x00000fa0      0x29c C:\Users\Aljaz\AppData\Local\Temp\cciipTdj.debug.temp.o
+ .debug_abbrev  0x0000123c      0x148 C:\Users\Aljaz\AppData\Local\Temp\ccY9KiD0.debug.temp.o
+ .debug_abbrev  0x00001384      0x2be C:\Users\Aljaz\AppData\Local\Temp\ccE16H2H.debug.temp.o
+ .debug_abbrev  0x00001642       0x14 obj\release\src\startup_stm32f0xx.o
+
+.debug_loc      0x00000000     0x2315
+ .debug_loc     0x00000000     0x2315 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+
+.debug_aranges  0x00000000       0xd8
+ .debug_aranges
+                0x00000000       0xb8 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .debug_aranges
+                0x000000b8       0x20 obj\release\src\startup_stm32f0xx.o
+
+.debug_ranges   0x00000000      0x7f8
+ .debug_ranges  0x00000000      0x7f8 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+
+.debug_line     0x00000000     0x3868
+ .debug_line    0x00000000     0x2680 C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .debug_line    0x00002680      0x116 C:\Users\Aljaz\AppData\Local\Temp\ccgD1G6g.debug.temp.o
+ .debug_line    0x00002796      0x106 C:\Users\Aljaz\AppData\Local\Temp\ccktCBcV.debug.temp.o
+ .debug_line    0x0000289c      0x1fc C:\Users\Aljaz\AppData\Local\Temp\ccojdwiz.debug.temp.o
+ .debug_line    0x00002a98      0x1fe C:\Users\Aljaz\AppData\Local\Temp\ccs9Nqod.debug.temp.o
+ .debug_line    0x00002c96      0x1fc C:\Users\Aljaz\AppData\Local\Temp\ccwZoluR.debug.temp.o
+ .debug_line    0x00002e92      0x1f7 C:\Users\Aljaz\AppData\Local\Temp\ccgHlFZc.debug.temp.o
+ .debug_line    0x00003089      0x113 C:\Users\Aljaz\AppData\Local\Temp\ccWyH4oU.debug.temp.o
+ .debug_line    0x0000319c      0x110 C:\Users\Aljaz\AppData\Local\Temp\ccCq3tOB.debug.temp.o
+ .debug_line    0x000032ac      0x1fd C:\Users\Aljaz\AppData\Local\Temp\cciipTdj.debug.temp.o
+ .debug_line    0x000034a9      0x11c C:\Users\Aljaz\AppData\Local\Temp\ccY9KiD0.debug.temp.o
+ .debug_line    0x000035c5      0x20a C:\Users\Aljaz\AppData\Local\Temp\ccE16H2H.debug.temp.o
+ .debug_line    0x000037cf       0x99 obj\release\src\startup_stm32f0xx.o
+
+.debug_str      0x00000000     0x1027
+ .debug_str     0x00000000       0xeb C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+                                0x175 (size before relaxing)
+ .debug_str     0x000000eb      0x198 C:\Users\Aljaz\AppData\Local\Temp\ccgD1G6g.debug.temp.o
+                                0x270 (size before relaxing)
+ .debug_str     0x00000283       0xd7 C:\Users\Aljaz\AppData\Local\Temp\ccktCBcV.debug.temp.o
+                                0x2b9 (size before relaxing)
+ .debug_str     0x0000035a      0x4a3 C:\Users\Aljaz\AppData\Local\Temp\ccojdwiz.debug.temp.o
+                                0x6a0 (size before relaxing)
+ .debug_str     0x000007fd       0x7f C:\Users\Aljaz\AppData\Local\Temp\ccs9Nqod.debug.temp.o
+                                0x686 (size before relaxing)
+ .debug_str     0x0000087c       0xe2 C:\Users\Aljaz\AppData\Local\Temp\ccwZoluR.debug.temp.o
+                                0x6df (size before relaxing)
+ .debug_str     0x0000095e      0x2e1 C:\Users\Aljaz\AppData\Local\Temp\ccgHlFZc.debug.temp.o
+                                0x986 (size before relaxing)
+ .debug_str     0x00000c3f       0xb5 C:\Users\Aljaz\AppData\Local\Temp\ccWyH4oU.debug.temp.o
+                                0x2ce (size before relaxing)
+ .debug_str     0x00000cf4       0xbb C:\Users\Aljaz\AppData\Local\Temp\ccCq3tOB.debug.temp.o
+                                0x323 (size before relaxing)
+ .debug_str     0x00000daf       0x91 C:\Users\Aljaz\AppData\Local\Temp\cciipTdj.debug.temp.o
+                                0x913 (size before relaxing)
+ .debug_str     0x00000e40       0x7b C:\Users\Aljaz\AppData\Local\Temp\ccY9KiD0.debug.temp.o
+                                0x2d2 (size before relaxing)
+ .debug_str     0x00000ebb       0xbc C:\Users\Aljaz\AppData\Local\Temp\ccE16H2H.debug.temp.o
+                                0x955 (size before relaxing)
+ .debug_str     0x00000f77       0xb0 obj\release\src\startup_stm32f0xx.o
+
+.debug_frame    0x00000000      0x2e0
+ .debug_frame   0x00000000      0x22c C:\Users\Aljaz\AppData\Local\Temp\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf.GtitAT.ltrans0.ltrans.o
+ .debug_frame   0x0000022c       0x28 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x00000254       0x2c c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x00000280       0x20 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x000002a0       0x20 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
+ .debug_frame   0x000002c0       0x20 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)

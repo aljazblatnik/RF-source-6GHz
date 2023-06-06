@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<EmBitz_project_file>
+	<EmBitzVersion release="2.60" revision="0" />
+	<FileVersion major="2" minor="0" />
+	<Project>
+		<Option title="RF_source_6GHz_STM32F030K6" />
+		<Option pch_mode="2" />
+		<Option compiler="armgcc_eb" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf" />
+				<Option object_output="obj\Debug\" />
+				<Option type="0" />
+				<Option create_hex="1" />
+				<Option compiler="armgcc_eb" />
+				<Option projectDeviceOptionsRelation="0" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+					<Add option="-O0" />
+					<Add option="-g2" />
+					<Add symbol="DEBUG_TARGET" />
+				</Compiler>
+				<Cpp>
+					<Add option="-Wall" />
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+					<Add option="-O0" />
+					<Add option="-g2" />
+				</Cpp>
+				<Assembler>
+					<Add option="-Wa,--gdwarf-2" />
+				</Assembler>
+				<Linker>
+					<Add option="-Wl,--gc-sections" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\EBitz2_IZVOR_6_GHZ_STM32F030K6.elf" />
+				<Option object_output="obj\Release\" />
+				<Option type="0" />
+				<Option create_hex="1" />
+				<Option compiler="armgcc_eb" />
+				<Option projectDeviceOptionsRelation="0" />
+				<Compiler>
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+					<Add option="-O2" />
+					<Add option="-g2" />
+					<Add symbol="RELEASE_TARGET" />
+				</Compiler>
+				<Cpp>
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+					<Add option="-O2" />
+					<Add option="-g2" />
+				</Cpp>
+				<Assembler>
+					<Add option="-Wa,--no-warn" />
+				</Assembler>
+				<Linker>
+					<Add option="-Wl,--gc-sections" />
+					<Add option="-flto" />
+				</Linker>
+				<ExtraCommands>
+					<Add after='arm-none-eabi-objcopy -O binary &quot;$(TARGET_OUTPUT_DIR)\$(TARGET_OUTPUT_BASENAME).elf&quot; &quot;$(TARGET_OUTPUT_DIR)\$(TARGET_OUTPUT_BASENAME).bin&quot;' />
+					<Mode before="0" />
+					<Mode after="0" />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Device>
+			<Add option="$device=cortex-m0" />
+			<Add option="$lscript=./stm32f030k6_flash.ld" />
+			<Add option="$stack=0x0100" />
+			<Add option="$heap=0x0000" />
+		</Device>
+		<Compiler>
+			<Add option="-mfloat-abi=soft" />
+			<Add option="-O2" />
+			<Add option="-fno-strict-aliasing" />
+			<Add symbol="ARM_MATH_CM0" />
+			<Add symbol="STM32F0X0_VALUE_LINE" />
+			<Add symbol="STM32F030K6" />
+			<Add symbol="STM32F030x6" />
+			<Add symbol="STM32F030" />
+			<Add symbol="PROJECT_C" />
+			<Add directory=".\cmsis" />
+			<Add directory=".\inc" />
+			<Add directory=".\src" />
+		</Compiler>
+		<Cpp>
+			<Add option="-mfloat-abi=soft" />
+			<Add option="-fno-strict-aliasing" />
+		</Cpp>
+		<Linker>
+			<Add option="-eb_lib=n" />
+			<Add option="-eb_start_files" />
+		</Linker>
+		<Unit filename="cmsis\arm_common_tables.h" />
+		<Unit filename="cmsis\arm_math.h" />
+		<Unit filename="cmsis\core_cm0.h" />
+		<Unit filename="cmsis\core_cmFunc.h" />
+		<Unit filename="cmsis\core_cmInstr.h" />
+		<Unit filename="inc\attenuator.h" />
+		<Unit filename="inc\calibration.h" />
+		<Unit filename="inc\delay.h" />
+		<Unit filename="inc\display.h" />
+		<Unit filename="inc\flash.h" />
+		<Unit filename="inc\lcd.h" />
+		<Unit filename="inc\max2871.h" />
+		<Unit filename="inc\menu.h" />
+		<Unit filename="inc\modulation.h" />
+		<Unit filename="inc\pcd8544.h" />
+		<Unit filename="inc\pinout.h" />
+		<Unit filename="inc\stm32f030x6.h" />
+		<Unit filename="inc\stm32f0xx.h" />
+		<Unit filename="inc\system_stm32f0xx.h" />
+		<Unit filename="inc\texts.h" />
+		<Unit filename="inc\usart.h" />
+		<Unit filename="src\attenuator.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\calibration.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\delay.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\display.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\flash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\lcd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\max2871.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\modulation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\startup_stm32f0xx.S">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\system_stm32f0xx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\usart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F030.svd" />
+		<Unit filename="stm32f030k6_flash.ld" />
+		<Unit filename="stm32f030k6_sram.ld" />
+		<Extensions>
+			<code_completion />
+			<debugger>
+				<target_debugging_settings target="Release">
+					<debug_interface description="STM32F030.svd" options="2" reg_filter="0" probe="STlink" device="stm32-auto" speed="" bus_address="" serial="" defines="" scripts="" flash_size="" ram_size="" vcc_voltage="" verbose="4" unwind="2" rstType="0" use_jtag="false" disable_cache="false" enable_semi="false" close_eblink="false" gdb_reset="" gdb_reset_remote="reset;" gdb_before_conn="" gdb_after_conn="" use_remote="false" ip_address="" ip_port="" path="" executable="" start_server="false" arguments="" flash_verify="false" flash_run="false" />
+				</target_debugging_settings>
+				<target_debugging_settings target="Debug">
+					<debug_interface description="STM32F030.svd" options="2" reg_filter="0" probe="STlink" device="stm32-auto" speed="" bus_address="" serial="" defines="" scripts="" flash_size="" ram_size="" vcc_voltage="" verbose="4" unwind="2" rstType="0" use_jtag="false" disable_cache="false" enable_semi="false" close_eblink="false" gdb_reset="" gdb_reset_remote="reset" gdb_before_conn="" gdb_after_conn="" use_remote="false" ip_address="" ip_port="" path="" executable="" start_server="false" arguments="" flash_verify="false" flash_run="false" />
+				</target_debugging_settings>
+			</debugger>
+			<envvars />
+		</Extensions>
+	</Project>
+</EmBitz_project_file>

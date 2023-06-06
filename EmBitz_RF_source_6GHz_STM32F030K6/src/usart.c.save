@@ -1,0 +1,68 @@
+#include "stm32f0xx.h"
+#include "system_stm32f0xx.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "delay.h"
+#include "usart.h"
+
+void usart_init(void){
+    RCC->AHBENR |= (RCC_AHBENR_GPIOAEN); // clock
+    RCC->APB2ENR |= (RCC_APB2ENR_USART1EN);
+
+    //RCC->CFGR3 |= RCC_CFGR3_USART1SW_SYSCLK; // default is  PCLK
+
+    // pin setup PA9 - TX | PA10 - RX
+    GPIOA->MODER |= (GPIO_MODER_MODER9_1 | GPIO_MODER_MODER10_1); // alternate function
+    GPIOA->OSPEEDR |= (GPIO_OSPEEDER_OSPEEDR9_0 | GPIO_OSPEEDER_OSPEEDR9_1 |
+                       GPIO_OSPEEDER_OSPEEDR10_0 | GPIO_OSPEEDER_OSPEEDR10_1); // full speed
+    //GPIOA->AFRH |=  ((GPIO_AFRH_AFRH1 & 0x1) | ((GPIO_AFRH_AFRH2 & 0x1))); // alternate function 1
+
+    GPIOA->AFR[1] |= 0x110; // high part of AFR register - HFRH
+
+    // USART setup
+    // DMA enable for receive
+    //USART1->CR3 |= USART_CR3_DMAR; // DMA enable receiver
+
+    //USART1->BRR = 0x340; // 115.25 KBps
+    USART1->BRR = 0x2710; // 9600 bits/s
+    USART1->CR1 |= USART_CR1_OVER8;
+    USART1->CR1 |= USART_CR1_RE; // receive enable
+    USART1->CR1 |= USART_CR1_TE; // transmit enable
+    //USART1->CR1 |= USART_CR1_RTOIE; // timeout interrupt enable
+    //USART1->CR2 |= USART_CR2_RTOEN; // Receiver timeout enable
+
+    USART1->RTOR = 0xFFFFFF; // timeout value
+
+    USART1->CR1 |= USART_CR1_UE; // usart enable
+    
+    // receive interrupt setup
+    USART1->CR1 |= USART_CR1_RXNEIE;
+    
+    
+    USART1->ISR & USART_ISR_
+
+
+    //(USART1->ISR & USART_ISR_RXNE) // data ready to be read
+    //USART1->RDR; // receive register
+    //USART1->TDR; // transmit register
+}
+
+void usart_send_string(char *str){
+    int i = 0;
+    while(str[i] != '\0'){
+        USART1->TDR = str[i] ;
+        i++;
+        while(!(USART1->ISR & USART_ISR_TC));
+    }
+    USART1->TDR = '\r';
+    while(!(USART1->ISR & USART_ISR_TC));
+    USART1->TDR = '\n';
+    while(!(USART1->ISR & USART_ISR_TC));
+}
+
+void usart_send_byte(unsigned char byte){
+    USART1->TDR = byte;
+    while(!(USART1->ISR & USART_ISR_TC));
+}

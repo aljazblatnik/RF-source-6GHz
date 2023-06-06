@@ -1,0 +1,450 @@
+#include "stm32f0xx.h"
+#include "system_stm32f0xx.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+//#include "pcd8544.h"
+#include "delay.h"
+#include "usart.h"
+
+#include "texts.h"
+
+#define CLK_HIGH GPIOA->BSRR|=GPIO_BSRR_BS_1  //PA1
+#define CLK_LOW GPIOA->BSRR|=GPIO_BSRR_BR_1   //PA1
+#define DATA_HIGH GPIOA->BSRR|=GPIO_BSRR_BS_2 //PA2
+#define DATA_LOW GPIOA->BSRR|=GPIO_BSRR_BR_2  //PA2
+#define LE_HIGH GPIOA->BSRR|=GPIO_BSRR_BS_3   //PA3
+#define LE_LOW GPIOA->BSRR|=GPIO_BSRR_BR_3    //PA3
+#define CE_HIGH GPIOA->BSRR|=GPIO_BSRR_BS_4   //PA4
+#define CE_LOW GPIOA->BSRR|=GPIO_BSRR_BR_4    //PA4
+#define RFEN_HIGH GPIOA->BSRR|=GPIO_BSRR_BS_5 //PA5
+#define RFEN_LOW GPIOA->BSRR|=GPIO_BSRR_BR_5  //PA5
+#define LD_HIGH GPIOA->BSRR|=GPIO_BSRR_BS_4   //PA6
+#define LD_LOW GPIOA->BSRR|=GPIO_BSRR_BR_4    //PA6
+#define MUX_HIGH GPIOA->BSRR|=GPIO_BSRR_BS_4  //PA7
+#define MUX_LOW GPIOA->BSRR|=GPIO_BSRR_BR_4   //PA7
+
+
+struct MAX2871_reg {
+    unsigned int R0;
+    unsigned int R1;
+    unsigned int R2;
+    unsigned int R3;
+    unsigned int R4;
+    unsigned int R5;
+    unsigned char R0_adr;
+    unsigned char R1_adr;
+    unsigned char R2_adr;
+    unsigned char R3_adr;
+    unsigned char R4_adr;
+    unsigned char R5_adr;
+} MAX2871_reg;
+
+
+// global variables
+char buffer[50]; //max 50 characters
+int buff_index = 0;
+
+unsigned char auto_send = 0; //0 - false, 1 - true
+
+struct MAX2871_reg MAX2871_reg;
+
+
+// primitives
+void init(void);
+void command_decode(char *str);
+int compare_string(char *first, char *second);
+char* int_to_hex_string(unsigned int i, char b[]);
+unsigned int string_to_int(char *str);
+void send_MAX2871(unsigned char addr, unsigned int data);
+void send_MAX2871_all(void);
+unsigned int read_MAX2871(void);
+
+int main(void)
+{
+    //SysTick_Config(4800000); /* 100ms config */
+    init();
+    timer14_init();
+    timer16_init();
+    usart_init();
+
+    // MAX2871 init
+    // initial registers values
+    MAX2871_reg.R0 = 0x007D0000; // my: 0x80640000
+    MAX2871_reg.R1 = 0x2000FFF9; // my: 0x8000
+    MAX2871_reg.R2 = 0x00004042; // my: 0x100
+    MAX2871_reg.R3 = 0x0000000B; // my: 0x1028000
+    MAX2871_reg.R4 = 0x6180B23C; // my: 0x60801368
+    MAX2871_reg.R5 = 0x00400005; // my: 0x61400000
+    MAX2871_reg.R0_adr = 0x00;
+    MAX2871_reg.R1_adr = 0x01;
+    MAX2871_reg.R2_adr = 0x02;
+    MAX2871_reg.R3_adr = 0x03;
+    MAX2871_reg.R4_adr = 0x04;
+    MAX2871_reg.R5_adr = 0x05;
+
+    // test
+    MAX2871_reg.R0 = 0x80640000;
+    MAX2871_reg.R1 = 0x8000;
+    MAX2871_reg.R2 = 0x100;
+    MAX2871_reg.R3 = 0x1028000;
+    MAX2871_reg.R4 = 0x60801368;
+    MAX2871_reg.R5 = 0x61400000;
+
+    CE_HIGH; // enable chip
+    LE_HIGH; // latch enable
+    CLK_LOW; // clk low
+
+    send_MAX2871_all();
+    delay_ms(50);
+    send_MAX2871_all();
+
+    //start(0x3f,0x04);
+    //GPIOA->BSRR = GPIO_BSRR_BR_0;
+    while(1){
+        //usart_send_string("TEST");
+        //GPIOA->ODR ^= GPIO_ODR_0;
+    }
+}
+
+void init(void){
+    RCC->AHBENR |= (RCC_AHBENR_GPIOAEN | RCC_AHBENR_GPIOBEN);  // prizgemo uro
+
+    GPIOA->MODER |= (GPIO_MODER_MODER1_0 | GPIO_MODER_MODER2_0 | GPIO_MODER_MODER3_0 |
+                     GPIO_MODER_MODER4_0 | GPIO_MODER_MODER5_0 | GPIO_MODER_MODER6_0 |
+                     GPIO_MODER_MODER7_0 | GPIO_MODER_MODER8_0 | GPIO_MODER_MODER11_0 |
+                     GPIO_MODER_MODER12_0 | GPIO_MODER_MODER15_0); // PA9, PA10 - USART
+    GPIOA->OSPEEDR |= 0xC3FFFFFF; // full speed (leave PA13 and PA14 as is)
+    GPIOB->MODER |= (GPIO_MODER_MODER0_0 | GPIO_MODER_MODER1_0 | GPIO_MODER_MODER3_0 |
+                     GPIO_MODER_MODER4_0 | GPIO_MODER_MODER5_0 | GPIO_MODER_MODER6_0 |
+                     GPIO_MODER_MODER7_0);
+    GPIOB->OSPEEDR |= 0xFFFFFFFF; // full speed
+
+    GPIOA->MODER |= (GPIO_MODER_MODER0_0); // led on board
+    GPIOA->ODR |= (GPIO_ODR_0); // board led on
+}
+
+void command_decode(char *str){
+    if(buff_index == 0){
+        // no command entered, return empty console
+        usart_send_string("\r\nARM > ");
+        return;
+    }
+    if(compare_string(buffer, "help") == 0){
+        usart_send_string(HELP);
+    }
+    else if(compare_string(buffer, "send -auto") == 0){
+        auto_send = 1;
+        usart_send_string("\r\nOK");
+    }
+    else if(compare_string(buffer, "send -man") == 0){
+        auto_send = 0;
+        usart_send_string("\r\nOK");
+    }
+    else if(compare_string(buffer, "send ?") == 0){
+        usart_send_string("\r\nSending of data set to ");
+        if(auto_send){
+            usart_send_string("automatic mode.");
+        }
+        else{
+            usart_send_string("manual mode.");
+        }
+    }
+    else if(compare_string(buffer, "send") == 0){
+        send_MAX2871_all();
+        usart_send_string("\r\nsend - OK");
+    }
+    else if(compare_string(buffer, "enable rf") == 0){
+        RFEN_HIGH;
+        usart_send_string("\r\nOK");
+    }
+    else if(compare_string(buffer, "disable rf") == 0){
+        RFEN_LOW;
+        usart_send_string("\r\nOK");
+    }
+    else if(compare_string(buffer, "enable chip") == 0){
+        CE_HIGH;
+        usart_send_string("\r\nOK");
+    }
+    else if(compare_string(buffer, "disable chip") == 0){
+        CE_LOW;
+        usart_send_string("\r\nOK");
+    }
+    else if(compare_string(buffer, "R0 ?") == 0){
+        char str[9];
+        int_to_hex_string(MAX2871_reg.R0,str);
+        usart_send_string("\r\n0x");
+        usart_send_string(str);
+    }
+    else if(compare_string(buffer, "R1 ?") == 0){
+        char str[9];
+        int_to_hex_string(MAX2871_reg.R1,str);
+        usart_send_string("\r\n0x");
+        usart_send_string(str);
+    }
+    else if(compare_string(buffer, "R2 ?") == 0){
+        char str[9];
+        int_to_hex_string(MAX2871_reg.R2,str);
+        usart_send_string("\r\n0x");
+        usart_send_string(str);
+    }
+    else if(compare_string(buffer, "R3 ?") == 0){
+        char str[9];
+        int_to_hex_string(MAX2871_reg.R3,str);
+        usart_send_string("\r\n0x");
+        usart_send_string(str);
+    }
+    else if(compare_string(buffer, "R4 ?") == 0){
+        char str[9];
+        int_to_hex_string(MAX2871_reg.R4,str);
+        usart_send_string("\r\n0x");
+        usart_send_string(str);
+    }
+    else if(compare_string(buffer, "R5 ?") == 0){
+        char str[9];
+        int_to_hex_string(MAX2871_reg.R5,str);
+        usart_send_string("\r\n0x");
+        usart_send_string(str);
+    }
+    else if(compare_string(buffer, "R -all") == 0){
+        char str[9];
+        int_to_hex_string(MAX2871_reg.R0,str);
+        usart_send_string("\r\nR0 = 0x");
+        usart_send_string(str);
+        int_to_hex_string(MAX2871_reg.R1,str);
+        usart_send_string("\r\nR1 = 0x");
+        usart_send_string(str);
+        int_to_hex_string(MAX2871_reg.R2,str);
+        usart_send_string("\r\nR2 = 0x");
+        usart_send_string(str);
+        int_to_hex_string(MAX2871_reg.R3,str);
+        usart_send_string("\r\nR3 = 0x");
+        usart_send_string(str);
+        int_to_hex_string(MAX2871_reg.R4,str);
+        usart_send_string("\r\nR4 = 0x");
+        usart_send_string(str);
+        int_to_hex_string(MAX2871_reg.R5,str);
+        usart_send_string("\r\nR5 = 0x");
+        usart_send_string(str);
+    }
+    else if(compare_string(buffer, "R0 ") == 0){
+        unsigned int result = string_to_int(&buffer[3]);
+        MAX2871_reg.R0 = result;
+        if(auto_send){
+            send_MAX2871(MAX2871_reg.R0_adr,MAX2871_reg.R0);
+        }
+        usart_send_string("\r\nOK");
+    }
+    else if(compare_string(buffer, "R1 ") == 0){
+        unsigned int result = string_to_int(&buffer[3]);
+        MAX2871_reg.R1 = result;
+        if(auto_send){
+            send_MAX2871(MAX2871_reg.R1_adr,MAX2871_reg.R1);
+        }
+        usart_send_string("\r\nOK");
+    }
+    else if(compare_string(buffer, "R2 ") == 0){
+        unsigned int result = string_to_int(&buffer[3]);
+        MAX2871_reg.R2 = result;
+        if(auto_send){
+            send_MAX2871(MAX2871_reg.R2_adr,MAX2871_reg.R2);
+        }
+        usart_send_string("\r\nOK");
+    }
+    else if(compare_string(buffer, "R3 ") == 0){
+        unsigned int result = string_to_int(&buffer[3]);
+        MAX2871_reg.R3 = result;
+        if(auto_send){
+            send_MAX2871(MAX2871_reg.R3_adr,MAX2871_reg.R3);
+        }
+        usart_send_string("\r\nOK");
+    }
+    else if(compare_string(buffer, "R4 ") == 0){
+        unsigned int result = string_to_int(&buffer[3]);
+        MAX2871_reg.R4 = result;
+        if(auto_send){
+            send_MAX2871(MAX2871_reg.R4_adr,MAX2871_reg.R4);
+        }
+        usart_send_string("\r\nOK");
+    }
+    else if(compare_string(buffer, "R5 ") == 0){
+        unsigned int result = string_to_int(&buffer[3]);
+        MAX2871_reg.R5 = result;
+        if(auto_send){
+            send_MAX2871(MAX2871_reg.R5_adr,MAX2871_reg.R5);
+        }
+        usart_send_string("\r\nOK");
+    }
+    else{
+        usart_send_string("\r\nUnrecognized command. Try help.");
+    }
+    buff_index = 0;
+    usart_send_string("\r\nARM > ");
+    return;
+}
+
+int compare_string(char *first, char *second){ // substring
+   while (*first == *second) {
+      if (*first == '\0' || *second == '\0')
+         break;
+
+      first++;
+      second++;
+   }
+
+   if (*second == '\0')
+      return 0;
+   else
+      return -1;
+}
+
+char* int_to_hex_string(unsigned int i, char b[]){
+    char const digit[] = "0123456789ABCDEF";
+    char* p = b;
+    /*
+    // negative number
+    if(i<0){
+        *p++ = '-';
+        i *= -1;
+    }
+    */
+    unsigned int shifter = i;
+    do{ //Move to where representation ends
+        ++p;
+        shifter = shifter/16;
+    }while(shifter);
+    *p = '\0';
+    do{ //Move back, inserting digits as u go
+        *--p = digit[i%16];
+        i = i/16;
+    }while(i);
+    return b;
+}
+
+unsigned int string_to_int(char *str){
+    unsigned int result = 0;
+    if(compare_string(str, "0x") == 0){
+        // we have hex
+        char const digit[] = "0123456789ABCDEF";
+        int i = 2;
+        while(str[i]){
+            int n;
+            for(n=0; digit[n]; n++){
+                if(digit[n] == str[i]){
+                    break;
+                }
+            }
+            result = result << 4;
+            result |= n;
+            i++;
+        }
+    }
+    else if(compare_string(str, "0b") == 0){
+        // we have binary
+        char const digit[] = "01";
+        int i = 2;
+        while(str[i]){
+            int n;
+            for(n=0; digit[n]; n++){
+                if(digit[n] == str[i]){
+                    break;
+                }
+            }
+            result = result << 1;
+            result |= n;
+            i++;
+        }
+    }
+    else{
+        // we have decimal
+        usart_send_string("\r\nDecimal number currently unsupported.");
+    }
+    return result;
+}
+
+
+void send_MAX2871(unsigned char addr, unsigned int data){
+    data &= 0xFFFFFF8;
+    data |= (addr&0b00000111); // prepare data
+    int i = 32;
+    LE_LOW;
+    //send data to MAX2871
+    while(i){
+        CLK_LOW;
+        if(data & 0x80000000){
+            DATA_HIGH;
+        }
+        else{
+            DATA_LOW;
+        }
+        data = data<<1;
+        CLK_HIGH;
+        i--;
+    }
+    CLK_LOW;
+    delay_us(10);
+    LE_HIGH;
+
+}
+
+void send_MAX2871_all(void){
+    send_MAX2871(MAX2871_reg.R5_adr,MAX2871_reg.R5);
+    send_MAX2871(MAX2871_reg.R4_adr,MAX2871_reg.R4);
+    send_MAX2871(MAX2871_reg.R3_adr,MAX2871_reg.R3);
+    send_MAX2871(MAX2871_reg.R2_adr,MAX2871_reg.R2);
+    send_MAX2871(MAX2871_reg.R1_adr,MAX2871_reg.R1);
+    send_MAX2871(MAX2871_reg.R0_adr,MAX2871_reg.R0);
+}
+
+unsigned int read_MAX2871(void){
+    //read MAX2871 R6 register
+    return 0;
+}
+
+/******************************************************************************/
+/*            Cortex-M0 Processor Exceptions Handlers                         */
+/******************************************************************************/
+
+void NMI_Handler(void);
+void HardFault_Handler(void){
+  while (1);
+}
+void SVC_Handler(void);
+void PendSV_Handler(void);
+void SysTick_Handler(void){
+    GPIOA->ODR ^= GPIO_ODR_0;
+}
+void USART1_IRQHandler(void){
+    if(USART1->ISR & USART_ISR_RXNE){ // new data in
+        unsigned char data = USART1->RDR;
+        if(data == 9){
+            usart_send_string("\r\nTAB unsupported!");
+            data = 13; // force new line
+        }
+        if((data == 8 || data == 127) && buff_index>0){
+            buff_index--;
+            USART1->TDR = data;
+            return;
+        }
+        else if((data == 8 || data == 127) && buff_index<=0){
+            return;
+        }
+        if(data>=32 || data == 13){
+            USART1->TDR = data; // echo
+            buffer[buff_index] = data;
+            if(data == 13){
+                buffer[buff_index] = 0;
+                command_decode(buffer);
+            }
+            else{
+                buff_index++;
+            }
+        }
+
+    }
+    else if(USART1->ISR & USART_ISR_ORE){ // overrun error
+        USART1->ICR |= USART_ICR_ORECF; // clear overrun error
+        // do nothing
+    }
+}
