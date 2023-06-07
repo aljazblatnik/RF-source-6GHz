@@ -9,6 +9,7 @@
 #include "attenuator.h"
 #include "menu.h"
 #include "flash.h"
+#include "calibration.h"
 
 extern int buff_index;
 
@@ -113,6 +114,7 @@ int string_to_int(char *str, int length){
                 break;
             }
         }
+        if (n > 9) n = 0; // not a digit but other ASCII char.
         result *= 10;
         result += n;
         i++;
@@ -142,21 +144,25 @@ int command_decode(char *str){
         return 0;
     }
     if(compare_string(str, "help") == 0){
-        usart_send_string("A xxx - amplitude [+/-dBm]\r\nF xxxxxxx - frequency [kHz]\r\nM xxxxx - modulation [Hz]\r\nP 123456789 - save settings\r\nR - reset, S x - memory\r\n\r\n");
+        usart_send_string("\r\nA xxx - amplitude [+/-dBm]\r\nF xxxxxxx - frequency [kHz]\r\nM xxxxx - modulation [Hz]\r\nP 123456789 - save settings\r\nR - reset, S x - memory\r\n\r\n");
     }
     else if(compare_string(str, "A ") == 0){
         int result = string_to_int(&str[2],3);
-        power = result;
+        power = calibrationReturnPower(frequency, result); // check for a Max and Min setting (to correct on display)
         usart_send_string("OK\r\n");
     }
     else if(compare_string(str, "F ") == 0){
         int result = string_to_int(&str[2],7);
         frequency = result;
+        if(frequency > 7000000) frequency = 6000000; // upper limit
+        if(frequency < 0) frequency = 0; // lower limit
         usart_send_string("OK\r\n");
     }
     else if(compare_string(str, "M ") == 0){
         int result = string_to_int(&str[2],5);
         modulation = result;
+        if(modulation > 50000) modulation = 50000; // upper limit
+        if(modulation < 0) modulation = 0; // lower limit
         usart_send_string("OK\r\n");
     }
     else if(compare_string(str, "P 123456789") == 0){
@@ -177,7 +183,6 @@ int command_decode(char *str){
         int result = string_to_int(&str[4],3);
         attenuator_send(result);
         usart_send_string("OK\r\n");
-        buff_index = 0;
         return 0; // do not update menu
     }
     else{

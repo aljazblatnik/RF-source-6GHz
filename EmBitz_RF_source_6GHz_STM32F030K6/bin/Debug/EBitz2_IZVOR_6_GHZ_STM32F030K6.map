@@ -118,7 +118,7 @@ Discarded input sections
                 0x00000000       0x90 obj\debug\src\lcd.o
  .debug_ranges  0x00000000       0x80 obj\debug\src\lcd.o
  .debug_line    0x00000000      0x3fc obj\debug\src\lcd.o
- .debug_str     0x00000000      0x6e5 obj\debug\src\lcd.o
+ .debug_str     0x00000000      0x6e8 obj\debug\src\lcd.o
  .comment       0x00000000       0x4d obj\debug\src\lcd.o
  .debug_frame   0x00000000      0x1d8 obj\debug\src\lcd.o
  .ARM.attributes
@@ -290,7 +290,7 @@ LOAD c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eab
                 0x08007c00                program_flash_memory
                 0x08007c78                . = ALIGN (0x4)
 
-.text           0x08000000     0x4c80
+.text           0x08000000     0x4cd8
  *(.isr_vector)
  .isr_vector    0x08000000       0xc4 obj\debug\src\startup_stm32f0xx.o
                 0x08000000                __isr_vector
@@ -504,38 +504,38 @@ LOAD c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eab
                 0x08002a80       0xb4 obj\debug\src\usart.o
                 0x08002a80                usart_send_report
  .text.string_to_int
-                0x08002b34       0xcc obj\debug\src\usart.o
+                0x08002b34       0xd4 obj\debug\src\usart.o
                 0x08002b34                string_to_int
  .text.compare_string
-                0x08002c00       0x4c obj\debug\src\usart.o
-                0x08002c00                compare_string
+                0x08002c08       0x4c obj\debug\src\usart.o
+                0x08002c08                compare_string
  .text.command_decode
-                0x08002c4c      0x1d4 obj\debug\src\usart.o
-                0x08002c4c                command_decode
- .text          0x08002e20      0x1d4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
-                0x08002e20                __divsi3
-                0x08002e20                __aeabi_idiv
-                0x08002fec                __aeabi_idivmod
- .text          0x08002ff4        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
-                0x08002ff4                __aeabi_idiv0
-                0x08002ff4                __aeabi_ldiv0
- .text.exit     0x08002ff8       0x2c c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-exit.o)
-                0x08002ff8                exit
+                0x08002c54      0x224 obj\debug\src\usart.o
+                0x08002c54                command_decode
+ .text          0x08002e78      0x1d4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
+                0x08002e78                __divsi3
+                0x08002e78                __aeabi_idiv
+                0x08003044                __aeabi_idivmod
+ .text          0x0800304c        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+                0x0800304c                __aeabi_idiv0
+                0x0800304c                __aeabi_ldiv0
+ .text.exit     0x08003050       0x2c c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-exit.o)
+                0x08003050                exit
  .text.__libc_init_array
-                0x08003024       0x48 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-init.o)
-                0x08003024                __libc_init_array
- .text.memset   0x0800306c       0x10 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-memset.o)
-                0x0800306c                memset
- .text._exit    0x0800307c        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
-                0x0800307c                _exit
+                0x0800307c       0x48 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-init.o)
+                0x0800307c                __libc_init_array
+ .text.memset   0x080030c4       0x10 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-memset.o)
+                0x080030c4                memset
+ .text._exit    0x080030d4        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
+                0x080030d4                _exit
  *(.init)
- .init          0x08003080        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crti.o
-                0x08003080                _init
- .init          0x08003084        0x8 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtn.o
+ .init          0x080030d8        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crti.o
+                0x080030d8                _init
+ .init          0x080030dc        0x8 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtn.o
  *(.fini)
- .fini          0x0800308c        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crti.o
-                0x0800308c                _fini
- .fini          0x08003090        0x8 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtn.o
+ .fini          0x080030e4        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crti.o
+                0x080030e4                _fini
+ .fini          0x080030e8        0x8 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtn.o
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -548,53 +548,53 @@ LOAD c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eab
  *(.dtors)
  *(.rodata*)
  .rodata.calibrationMax
-                0x08003098     0x194c obj\debug\src\calibration.o
-                0x08003098                calibrationMax
- .rodata        0x080049e4       0x3f obj\debug\src\main.o
- *fill*         0x08004a23        0x1 
- .rodata        0x08004a24       0x59 obj\debug\src\menu.o
- *fill*         0x08004a7d        0x3 
+                0x080030f0     0x194c obj\debug\src\calibration.o
+                0x080030f0                calibrationMax
+ .rodata        0x08004a3c       0x3f obj\debug\src\main.o
+ *fill*         0x08004a7b        0x1 
+ .rodata        0x08004a7c       0x59 obj\debug\src\menu.o
+ *fill*         0x08004ad5        0x3 
  .rodata.moveCursorUD
-                0x08004a80       0xe8 obj\debug\src\menu.o
- .rodata        0x08004b68      0x10e obj\debug\src\usart.o
- *fill*         0x08004c76        0x2 
+                0x08004ad8       0xe8 obj\debug\src\menu.o
+ .rodata        0x08004bc0      0x10e obj\debug\src\usart.o
+ *fill*         0x08004cce        0x2 
  .rodata._global_impure_ptr
-                0x08004c78        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-impure.o)
-                0x08004c78                _global_impure_ptr
+                0x08004cd0        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-impure.o)
+                0x08004cd0                _global_impure_ptr
  *(.eh_frame*)
- .eh_frame      0x08004c7c        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
- .eh_frame      0x08004c7c        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtend.o
+ .eh_frame      0x08004cd4        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
+ .eh_frame      0x08004cd4        0x4 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtend.o
 
-.glue_7         0x08004c80        0x0
- .glue_7        0x08004c80        0x0 linker stubs
+.glue_7         0x08004cd8        0x0
+ .glue_7        0x08004cd8        0x0 linker stubs
 
-.glue_7t        0x08004c80        0x0
- .glue_7t       0x08004c80        0x0 linker stubs
+.glue_7t        0x08004cd8        0x0
+ .glue_7t       0x08004cd8        0x0 linker stubs
 
-.vfp11_veneer   0x08004c80        0x0
- .vfp11_veneer  0x08004c80        0x0 linker stubs
+.vfp11_veneer   0x08004cd8        0x0
+ .vfp11_veneer  0x08004cd8        0x0 linker stubs
 
-.v4_bx          0x08004c80        0x0
- .v4_bx         0x08004c80        0x0 linker stubs
+.v4_bx          0x08004cd8        0x0
+ .v4_bx         0x08004cd8        0x0 linker stubs
 
-.iplt           0x08004c80        0x0
- .iplt          0x08004c80        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x08004cd8        0x0
+ .iplt          0x08004cd8        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08004c80                __exidx_start = .
+                0x08004cd8                __exidx_start = .
 
-.ARM.exidx      0x08004c80        0x8
+.ARM.exidx      0x08004cd8        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x08004c80        0x8 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+ .ARM.exidx     0x08004cd8        0x8 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
                                  0x10 (size before relaxing)
-                0x08004c88                __exidx_end = .
-                0x08004c88                __etext = .
+                0x08004ce0                __exidx_end = .
+                0x08004ce0                __etext = .
 
-.rel.dyn        0x08004c88        0x0
- .rel.iplt      0x08004c88        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x08004ce0        0x0
+ .rel.iplt      0x08004ce0        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.data           0x20000000       0x70 load address 0x08004c88
+.data           0x20000000       0x70 load address 0x08004ce0
                 0x20000000                __data_start__ = .
  *(vtable)
  *(.data*)
@@ -625,10 +625,10 @@ LOAD c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eab
                 0x20000070                . = ALIGN (0x4)
                 0x20000070                __data_end__ = .
 
-.igot.plt       0x20000070        0x0 load address 0x08004cf8
+.igot.plt       0x20000070        0x0 load address 0x08004d50
  .igot.plt      0x20000070        0x0 c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.bss            0x20000070       0xfc load address 0x08004cf8
+.bss            0x20000070       0xfc load address 0x08004d50
                 0x20000070                __bss_start__ = .
  *(.bss*)
  .bss           0x20000070       0x1c c:/program files (x86)/embitz/2.60/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
@@ -852,7 +852,7 @@ LOAD linker stubs
  .debug_ranges  0x000001f0       0x20 obj\debug\src\system_stm32f0xx.o
  .debug_ranges  0x00000210       0x60 obj\debug\src\usart.o
 
-.debug_line     0x00000000     0x29f3
+.debug_line     0x00000000     0x2a31
  .debug_line    0x00000000      0x1b1 obj\debug\src\attenuator.o
  .debug_line    0x000001b1      0x1f8 obj\debug\src\calibration.o
  .debug_line    0x000003a9      0x39b obj\debug\src\delay.o
@@ -864,33 +864,33 @@ LOAD linker stubs
  .debug_line    0x00001d5e      0x44d obj\debug\src\modulation.o
  .debug_line    0x000021ab       0x99 obj\debug\src\startup_stm32f0xx.o
  .debug_line    0x00002244      0x22b obj\debug\src\system_stm32f0xx.o
- .debug_line    0x0000246f      0x584 obj\debug\src\usart.o
+ .debug_line    0x0000246f      0x5c2 obj\debug\src\usart.o
 
-.debug_str      0x00000000      0xf14
- .debug_str     0x00000000      0x1fa obj\debug\src\attenuator.o
-                                0x248 (size before relaxing)
- .debug_str     0x000001fa       0xd7 obj\debug\src\calibration.o
-                                0x291 (size before relaxing)
- .debug_str     0x000002d1      0x4a3 obj\debug\src\delay.o
-                                0x678 (size before relaxing)
- .debug_str     0x00000774       0x7f obj\debug\src\display.o
-                                0x65e (size before relaxing)
- .debug_str     0x000007f3       0xe2 obj\debug\src\flash.o
-                                0x6b7 (size before relaxing)
- .debug_str     0x000008d5      0x2e1 obj\debug\src\main.o
-                                0x95e (size before relaxing)
- .debug_str     0x00000bb6       0xb5 obj\debug\src\max2871.o
-                                0x2a6 (size before relaxing)
- .debug_str     0x00000c6b       0xbb obj\debug\src\menu.o
-                                0x2fb (size before relaxing)
- .debug_str     0x00000d26       0x91 obj\debug\src\modulation.o
-                                0x8eb (size before relaxing)
- .debug_str     0x00000db7       0x26 obj\debug\src\startup_stm32f0xx.o
-                                 0x8a (size before relaxing)
- .debug_str     0x00000ddd       0x7b obj\debug\src\system_stm32f0xx.o
-                                0x2aa (size before relaxing)
- .debug_str     0x00000e58       0xbc obj\debug\src\usart.o
-                                0x92d (size before relaxing)
+.debug_str      0x00000000      0xf17
+ .debug_str     0x00000000      0x1fd obj\debug\src\attenuator.o
+                                0x24b (size before relaxing)
+ .debug_str     0x000001fd       0xd7 obj\debug\src\calibration.o
+                                0x294 (size before relaxing)
+ .debug_str     0x000002d4      0x4a3 obj\debug\src\delay.o
+                                0x67b (size before relaxing)
+ .debug_str     0x00000777       0x7f obj\debug\src\display.o
+                                0x661 (size before relaxing)
+ .debug_str     0x000007f6       0xe2 obj\debug\src\flash.o
+                                0x6ba (size before relaxing)
+ .debug_str     0x000008d8      0x2e1 obj\debug\src\main.o
+                                0x961 (size before relaxing)
+ .debug_str     0x00000bb9       0xb5 obj\debug\src\max2871.o
+                                0x2a9 (size before relaxing)
+ .debug_str     0x00000c6e       0xbb obj\debug\src\menu.o
+                                0x2fe (size before relaxing)
+ .debug_str     0x00000d29       0x91 obj\debug\src\modulation.o
+                                0x8ee (size before relaxing)
+ .debug_str     0x00000dba       0x26 obj\debug\src\startup_stm32f0xx.o
+                                 0x8d (size before relaxing)
+ .debug_str     0x00000de0       0x7b obj\debug\src\system_stm32f0xx.o
+                                0x2ad (size before relaxing)
+ .debug_str     0x00000e5b       0xbc obj\debug\src\usart.o
+                                0x930 (size before relaxing)
 
 .debug_frame    0x00000000      0x928
  .debug_frame   0x00000000       0x6c obj\debug\src\attenuator.o
