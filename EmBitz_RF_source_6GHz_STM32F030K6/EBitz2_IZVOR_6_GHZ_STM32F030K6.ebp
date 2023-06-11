@@ -61,7 +61,6 @@
 				</Assembler>
 				<Linker>
 					<Add option="-Wl,--gc-sections" />
-					<Add option="-flto" />
 				</Linker>
 				<ExtraCommands>
 					<Add after='arm-none-eabi-objcopy -O binary &quot;$(TARGET_OUTPUT_DIR)\$(TARGET_OUTPUT_BASENAME).elf&quot; &quot;$(TARGET_OUTPUT_DIR)\$(TARGET_OUTPUT_BASENAME).bin&quot;' />

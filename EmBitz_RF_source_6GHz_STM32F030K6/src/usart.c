@@ -29,13 +29,12 @@ void usart_init(void){
     USART1->CR1 |= USART_CR1_RE; // receive enable
     USART1->CR1 |= USART_CR1_TE; // transmit enable
     USART1->RTOR = 0xFFFFFF; // timeout value
+    USART1->CR1 |= USART_CR1_RXNEIE; // receive interrupt setup
     USART1->CR1 |= USART_CR1_UE; // usart enable
 
-    // receive interrupt setup
-    USART1->CR1 |= USART_CR1_RXNEIE;
-
+    NVIC_SetPriority(USART1_IRQn,9);   //enable interrupt
     NVIC_EnableIRQ(USART1_IRQn);
-    NVIC_SetPriority(USART1_IRQn,2);   //enable interrupt
+
 }
 
 void usart_send_string(char *str){

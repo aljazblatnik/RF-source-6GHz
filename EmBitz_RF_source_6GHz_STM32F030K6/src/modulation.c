@@ -33,7 +33,7 @@ void timer3_init(void){
 
     TIM3->EGR = TIM_EGR_UG; // Re-initializes the timer counter
 
-    NVIC_EnableIRQ(TIM3_IRQn);
+    NVIC_DisableIRQ(TIM3_IRQn); // Disable TIM3 IRQ
     NVIC_SetPriority(TIM3_IRQn,1);   //enable interrupt
 
     //TIM3->SR & TIM_SR_CC3IF;
@@ -103,7 +103,7 @@ void modulationSet(int mod_freq){
         // vklopimo stevec
         TIM3->EGR = TIM_EGR_UG; // Re-initializes the timer counter
         TIM3->CR1 |= TIM_CR1_CEN; // TIMER ON
-        NVIC_EnableIRQ(TIM3_IRQn); // enable interrupte
+        NVIC_EnableIRQ(TIM3_IRQn); // enable interrupts
     }
     else{
          // Calculate the counter needed, rounded down

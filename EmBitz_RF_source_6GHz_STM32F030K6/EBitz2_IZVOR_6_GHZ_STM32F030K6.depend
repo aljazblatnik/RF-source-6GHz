@@ -432,7 +432,7 @@
 
 1686073926 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\lcd.h
 
-1686133690 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\main.c
+1686486023 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -482,7 +482,7 @@
 	"max2871.h"
 	"attenuator.h"
 
-1686001220 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\modulation.c
+1686485352 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\modulation.c
 	"stm32f0xx.h"
 	"system_stm32f0xx.h"
 	<stdio.h>
@@ -494,7 +494,7 @@
 1461861218 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\system_stm32f0xx.c
 	"stm32f0xx.h"
 
-1686133655 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\usart.c
+1686486255 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\usart.c
 	"stm32f0xx.h"
 	"system_stm32f0xx.h"
 	<stdio.h>

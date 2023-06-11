@@ -222,7 +222,5 @@ void USART1_IRQHandler(void){
             }
         }
     }
-    else if(USART1->ISR & USART_ISR_ORE){ // overrun error - do nothing
-        USART1->ICR |= USART_ICR_ORECF; // clear overrun error
-    }
+    USART1->ICR |= 0x00020A5F; // clear all flags
 }
