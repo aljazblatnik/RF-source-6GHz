@@ -340,13 +340,13 @@
 	"menu.h"
 	"flash.h"
 
-1685986148 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\attenuator.c
+1685982548 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\attenuator.c
 	"stm32f0xx.h"
 	"system_stm32f0xx.h"
 	"pinout.h"
 	"delay.h"
 
-1686073926 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\stm32f0xx.h
+1686070326 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\stm32f0xx.h
 	"stm32f030x6.h"
 	"stm32f030x8.h"
 	"stm32f031x6.h"
@@ -365,44 +365,44 @@
 	"stm32f030xc.h"
 	"stm32f0xx_hal.h"
 
-1686073926 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\stm32f030x6.h
+1686070326 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\stm32f030x6.h
 	"core_cm0.h"
 	"system_stm32f0xx.h"
 	<stdint.h>
 
-1686073926 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\cmsis\core_cm0.h
+1686070326 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\cmsis\core_cm0.h
 	<stdint.h>
 	<core_cmInstr.h>
 	<core_cmFunc.h>
 
-1686073926 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\cmsis\core_cminstr.h
+1686070326 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\cmsis\core_cminstr.h
 	<cmsis_iar.h>
 	<cmsis_ccs.h>
 	<cmsis_csm.h>
 
-1686073926 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\cmsis\core_cmfunc.h
+1686070326 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\cmsis\core_cmfunc.h
 	<cmsis_iar.h>
 	<cmsis_ccs.h>
 	<cmsis_csm.h>
 
-1686073926 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\system_stm32f0xx.h
+1686070326 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\system_stm32f0xx.h
 
-1686073926 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\pinout.h
+1686070326 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\pinout.h
 
-1686073926 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\delay.h
+1686070326 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\delay.h
 
-1686134367 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\calibration.c
+1711362388 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\calibration.c
 	"stm32f0xx.h"
 	"system_stm32f0xx.h"
 	"delay.h"
 
-1461877714 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\delay.c
+1461874114 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\delay.c
 	"stm32f0xx.h"
 	"system_stm32f0xx.h"
 	<stdio.h>
 	<stdlib.h>
 
-1685988472 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\display.c
+1685984872 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\display.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -412,15 +412,15 @@
 	"delay.h"
 	"display.h"
 
-1686073926 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\display.h
+1686070326 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\display.h
 
-1685992107 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\flash.c
+1685988507 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\flash.c
 	"stm32f0xx.h"
 	"system_stm32f0xx.h"
 	<stdio.h>
 	<stdlib.h>
 
-1614470378 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\lcd.c
+1614466778 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\lcd.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -430,9 +430,9 @@
 	"delay.h"
 	"lcd.h"
 
-1686073926 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\lcd.h
+1686070326 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\lcd.h
 
-1686486023 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\main.c
+1711362352 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -449,27 +449,27 @@
 	"modulation.h"
 	"flash.h"
 
-1686073926 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\usart.h
+1686070326 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\usart.h
 
-1686073926 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\menu.h
+1686070326 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\menu.h
 
-1686073926 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\max2871.h
+1686070326 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\max2871.h
 
-1686073926 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\attenuator.h
+1686070326 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\attenuator.h
 
-1686073926 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\calibration.h
+1686070326 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\calibration.h
 
-1686073926 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\modulation.h
+1686070326 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\modulation.h
 
-1686073926 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\flash.h
+1686070326 c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\inc\flash.h
 
-1685996737 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\max2871.c
+1685993137 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\max2871.c
 	"stm32f0xx.h"
 	"system_stm32f0xx.h"
 	"pinout.h"
 	"delay.h"
 
-1686055578 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\menu.c
+1686051978 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\menu.c
 	"stm32f0xx.h"
 	"system_stm32f0xx.h"
 	"pinout.h"
@@ -482,19 +482,19 @@
 	"max2871.h"
 	"attenuator.h"
 
-1686485352 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\modulation.c
+1711362293 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\modulation.c
 	"stm32f0xx.h"
 	"system_stm32f0xx.h"
 	<stdio.h>
 	<stdlib.h>
 	"pinout.h"
 
-1686073926 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\startup_stm32f0xx.s
+1686070326 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\startup_stm32f0xx.s
 
-1461861218 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\system_stm32f0xx.c
+1461857618 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\system_stm32f0xx.c
 	"stm32f0xx.h"
 
-1686486255 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\usart.c
+1686482655 source:c:\users\aljaz\onedrive - univerza v ljubljani\github\rf-source-6ghz\embitz_rf_source_6ghz_stm32f030k6\src\usart.c
 	"stm32f0xx.h"
 	"system_stm32f0xx.h"
 	<stdio.h>

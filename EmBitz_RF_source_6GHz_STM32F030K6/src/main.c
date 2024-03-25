@@ -63,7 +63,7 @@ int main(void)
 
     // Write on display
     lcdDisplayClear();
-    lcdWriteString("RF source 6 GHz \r\n Aljaz B. v2.1 ");
+    lcdWriteString("RF source 6 GHz \r\n Aljaz B. v2.2 ");
     lcdPositionXY(17,0); // remove cursor from visible area of the LCD screen
 
     // Init. everything else
@@ -81,7 +81,7 @@ int main(void)
 
     // Send report to USART
     usart_send_string("RF source 6 GHz\r\n");
-    usart_send_string("v2.1\r\n");
+    usart_send_string("v2.2\r\n");
     usart_send_report();
 
     SysTick_Config(4800000); // 100 mS config - status update rate

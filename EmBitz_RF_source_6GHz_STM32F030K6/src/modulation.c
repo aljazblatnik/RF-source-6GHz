@@ -49,8 +49,10 @@ void modulationSet(int mod_freq){
     // change AF1 output mode
     MOD_LOW;
     RFEN_LOW;
-    GPIOA->MODER &= (~GPIO_MODER_MODER6) | GPIO_MODER_MODER6_1; // MOD output - AF1
-    GPIOB->MODER &= (~GPIO_MODER_MODER5) | GPIO_MODER_MODER5_1;; // MOD output - AF1
+    GPIOA->MODER &= ~GPIO_MODER_MODER6; // Clear mode settings
+    GPIOB->MODER &= ~GPIO_MODER_MODER5; // Clear mode settings
+    GPIOA->MODER |= GPIO_MODER_MODER6_1; // MOD output - AF1
+    GPIOB->MODER |= GPIO_MODER_MODER5_1; // MOD output - AF1
 
     if(mod_freq <= 0){
         // Stop the counter
@@ -59,8 +61,10 @@ void modulationSet(int mod_freq){
         NVIC_DisableIRQ(TIM3_IRQn); // Disable interrupt
 
         // set pin to output mode
-        GPIOA->MODER &= (~GPIO_MODER_MODER6) | GPIO_MODER_MODER6_0; // MOD output - normal output
-        GPIOB->MODER &= (~GPIO_MODER_MODER5) | GPIO_MODER_MODER5_0;; // MOD output - normal output
+        GPIOA->MODER &= ~GPIO_MODER_MODER6; // Clear mode settings
+        GPIOB->MODER &= ~GPIO_MODER_MODER5; // Clear mode settings
+        GPIOA->MODER |= GPIO_MODER_MODER6_0; // MOD output - normal output
+        GPIOB->MODER |= GPIO_MODER_MODER5_0; // MOD output - normal output
         MOD_HIGH;
         RFEN_HIGH;
     }
