@@ -45,6 +45,8 @@ int memory[10][3];
 // Global variables - current values!
 int cursor = 0;
 int program = 0;
+int programSpecial = 0;
+char mode = 0; // 0 - normal, 1 - special
 char status = '?';
 int status_change = 0;
 int frequency = 0; // in kHz

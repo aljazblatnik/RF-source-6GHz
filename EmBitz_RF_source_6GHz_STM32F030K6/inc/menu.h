@@ -6,6 +6,7 @@ void menuSaveDataFromWorkingRAMToMemory(int program);
 void moveCursorLR();
 void moveCursorUD();
 void menuShow();
+void menuShowSpecial();
 void menuShowStatus(char status);
 void menuShowFrequency(int new_frequency);
 

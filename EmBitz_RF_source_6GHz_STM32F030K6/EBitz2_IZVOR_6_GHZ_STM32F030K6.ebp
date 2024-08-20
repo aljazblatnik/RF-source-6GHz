@@ -113,6 +113,7 @@
 		<Unit filename="inc\modulation.h" />
 		<Unit filename="inc\pcd8544.h" />
 		<Unit filename="inc\pinout.h" />
+		<Unit filename="inc\special.h" />
 		<Unit filename="inc\stm32f030x6.h" />
 		<Unit filename="inc\stm32f0xx.h" />
 		<Unit filename="inc\system_stm32f0xx.h" />
@@ -146,6 +147,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\modulation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\special.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\startup_stm32f0xx.S">

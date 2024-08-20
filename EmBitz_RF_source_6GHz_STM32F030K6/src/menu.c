@@ -16,6 +16,8 @@ extern int memory[10][3];
 
 extern int cursor;
 extern  int program;
+extern int programSpecial;
+extern char mode;
 extern  char status;
 extern  int frequency; // kHz
 extern  int frequency_output;
@@ -159,6 +161,31 @@ void menuShow(void){
 
     menuSaveDataFromWorkingRAMToMemory(program); // save updates to current memory RAm
     frequency_flash = -200;  // 2s frequency flash
+}
+
+void menuShowSpecial(void){
+    lcdPositionXY(0,0);
+    lcdWriteChar((unsigned char)(0x30 + programSpecial));
+    lcdWriteChar(' ');
+    lcdWriteChar(' ');
+    lcdWriteString("GNSS jammer  \n");
+    switch(programSpecial){
+    case 0:
+        lcdWriteString("L1 CW (GPS)     \n");
+        break;
+    case 1:
+        lcdWriteString("L1 CW-hop (all) \n");
+        break;
+    case 2:
+        lcdWriteString("L1 Sweep (GPS)  \n");
+        break;
+    case 3:
+        lcdWriteString("L1 Sweep (all)  \n");
+        break;
+    default:
+        lcdWriteString("----------------\n");
+    }
+    lcdPositionXY(cursor%16,cursor/16);
 }
 
 void menuShowStatus(char status){
@@ -375,6 +402,35 @@ void moveCursorUD(void){
         // show changes and wait for a button release
         menuShow();
         usart_send_report();
+
+        // Special mode entry
+        int timer = 200;
+        while(!bUP && timer){
+            delay_ms(1);
+            if(!bDOWN){
+                // user holds both buttons
+                lcdPositionXY(0,0); // set cursor to starting point
+                cursor = 0;
+                if(mode == 0){
+                    lcdWriteString("* SPECIAL MODE *\n   Loading...   ");
+                    delay_ms(3000);
+                    lcdDisplayClear(); // clear up display
+                    menuShowSpecial(); // show special
+                    timer = 0;
+                    mode = 1;
+                }
+                else{
+                    lcdWriteString("* NORMAL MODE  *\n   Loading...   ");
+                    delay_ms(3000);
+                    lcdDisplayClear(); // clear up display
+                    menuShow(); // show back menu
+                    timer = 0;
+                    mode = 0;
+                }
+                while(!bUP || !bDOWN); // wait for user to release both buttons
+            }
+            timer--;
+        }
         while(!bUP);
         delay_ms(10);
     }
@@ -443,6 +499,36 @@ void moveCursorUD(void){
         // show changes and wait for a button release
         menuShow();
         usart_send_report();
+
+        // Special mode entry
+        int timer = 200;
+        while(!bDOWN && timer){
+            delay_ms(1);
+            if(!bUP){
+                // user holds both buttons
+                lcdPositionXY(0,0); // set cursor to starting point
+                cursor = 0;
+                if(mode == 0){
+                    lcdWriteString("* SPECIAL MODE *\n   Loading...   ");
+                    delay_ms(3000);
+                    lcdDisplayClear(); // clear up display
+                    menuShowSpecial(); // show special
+                    timer = 0;
+                    mode = 1;
+                    lcdPositionXY(0,0);
+                }
+                else{
+                    lcdWriteString("* NORMAL MODE  *\n   Loading...   ");
+                    delay_ms(3000);
+                    lcdDisplayClear(); // clear up display
+                    menuShow(); // show back menu
+                    timer = 0;
+                    mode = 0;
+                }
+                while(!bUP || !bDOWN); // wait for user to release both buttons
+            }
+            timer--;
+        }
         while(!bDOWN);
         delay_ms(10);
     }
