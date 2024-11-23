@@ -148,6 +148,26 @@ Discarded input sections
  .text          0x00000000        0x0 obj\release\src\modulation.o
  .data          0x00000000        0x0 obj\release\src\modulation.o
  .bss           0x00000000        0x0 obj\release\src\modulation.o
+ .text          0x00000000        0x0 obj\release\src\special.o
+ .data          0x00000000        0x0 obj\release\src\special.o
+ .bss           0x00000000        0x0 obj\release\src\special.o
+ .text.doSpecialMode
+                0x00000000       0xc8 obj\release\src\special.o
+ .bss.step      0x00000000        0x4 obj\release\src\special.o
+ .data.set_frequency
+                0x00000000        0x4 obj\release\src\special.o
+ .debug_info    0x00000000      0x18d obj\release\src\special.o
+ .debug_abbrev  0x00000000       0xd1 obj\release\src\special.o
+ .debug_loc     0x00000000      0x10d obj\release\src\special.o
+ .debug_aranges
+                0x00000000       0x20 obj\release\src\special.o
+ .debug_ranges  0x00000000       0x10 obj\release\src\special.o
+ .debug_line    0x00000000      0x21b obj\release\src\special.o
+ .debug_str     0x00000000      0x202 obj\release\src\special.o
+ .comment       0x00000000       0x4d obj\release\src\special.o
+ .debug_frame   0x00000000       0x2c obj\release\src\special.o
+ .ARM.attributes
+                0x00000000       0x2c obj\release\src\special.o
  .data          0x00000000        0x0 obj\release\src\startup_stm32f0xx.o
  .bss           0x00000000        0x0 obj\release\src\startup_stm32f0xx.o
  .text          0x00000000        0x0 obj\release\src\system_stm32f0xx.o
@@ -305,7 +325,7 @@ LOAD c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eab
                 0x08007c00                program_flash_memory
                 0x08007c78                . = ALIGN (0x4)
 
-.text           0x08000000     0x3dc8
+.text           0x08000000     0x4090
  *(.isr_vector)
  .isr_vector    0x08000000       0xc4 obj\release\src\startup_stm32f0xx.o
                 0x08000000                __isr_vector
@@ -406,109 +426,112 @@ LOAD c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eab
  .text.menuShow
                 0x08000d70      0x28c obj\release\src\menu.o
                 0x08000d70                menuShow
+ .text.menuShowSpecial
+                0x08000ffc       0xa4 obj\release\src\menu.o
+                0x08000ffc                menuShowSpecial
  .text.menuShowStatus
-                0x08000ffc       0x38 obj\release\src\menu.o
-                0x08000ffc                menuShowStatus
+                0x080010a0       0x38 obj\release\src\menu.o
+                0x080010a0                menuShowStatus
  .text.menuShowFrequency
-                0x08001034       0xf0 obj\release\src\menu.o
-                0x08001034                menuShowFrequency
+                0x080010d8       0xf0 obj\release\src\menu.o
+                0x080010d8                menuShowFrequency
  .text.moveCursorLR
-                0x08001124      0x224 obj\release\src\menu.o
-                0x08001124                moveCursorLR
+                0x080011c8      0x224 obj\release\src\menu.o
+                0x080011c8                moveCursorLR
  .text.moveCursorUD
-                0x08001348      0x2d0 obj\release\src\menu.o
-                0x08001348                moveCursorUD
+                0x080013ec      0x438 obj\release\src\menu.o
+                0x080013ec                moveCursorUD
  .text.timer3_init
-                0x08001618       0x84 obj\release\src\modulation.o
-                0x08001618                timer3_init
+                0x08001824       0x84 obj\release\src\modulation.o
+                0x08001824                timer3_init
  .text.modulationSet
-                0x0800169c      0x168 obj\release\src\modulation.o
-                0x0800169c                modulationSet
+                0x080018a8      0x168 obj\release\src\modulation.o
+                0x080018a8                modulationSet
  .text.TIM3_IRQHandler
-                0x08001804       0x48 obj\release\src\modulation.o
-                0x08001804                TIM3_IRQHandler
- .text          0x0800184c       0xa0 obj\release\src\startup_stm32f0xx.o
-                0x0800184c                Reset_Handler
-                0x08001896                NMI_Handler
-                0x0800189a                SVC_Handler
-                0x0800189c                PendSV_Handler
-                0x080018a0                Default_Handler
-                0x080018a2                WWDG_IRQHandler
-                0x080018a4                PVD_IRQHandler
-                0x080018a6                RTC_IRQHandler
-                0x080018a8                FLASH_IRQHandler
-                0x080018aa                RCC_IRQHandler
-                0x080018ac                EXTI0_1_IRQHandler
-                0x080018ae                EXTI2_3_IRQHandler
-                0x080018b0                EXTI4_15_IRQHandler
-                0x080018b2                TS_IRQHandler
-                0x080018b4                DMA1_Channel1_IRQHandler
-                0x080018b6                DMA1_Channel2_3_IRQHandler
-                0x080018b8                DMA1_Channel4_5_IRQHandler
-                0x080018ba                ADC1_COMP_IRQHandler
-                0x080018bc                TIM1_BRK_UP_TRG_COM_IRQHandler
-                0x080018be                TIM1_CC_IRQHandler
-                0x080018c0                TIM2_IRQHandler
-                0x080018c4                TIM6_DAC_IRQHandler
-                0x080018c6                TIM7_IRQHandler
-                0x080018c8                TIM14_IRQHandler
-                0x080018ca                TIM15_IRQHandler
-                0x080018cc                TIM16_IRQHandler
-                0x080018ce                TIM17_IRQHandler
-                0x080018d0                I2C1_IRQHandler
-                0x080018d2                I2C2_IRQHandler
-                0x080018d4                SPI1_IRQHandler
-                0x080018d6                SPI2_IRQHandler
-                0x080018da                USART2_IRQHandler
-                0x080018dc                USART3_4_IRQHandler
-                0x080018de                CEC_IRQHandler
-                0x080018e0                USB_IRQHandler
-                0x080018e2                BootRAM
+                0x08001a10       0x48 obj\release\src\modulation.o
+                0x08001a10                TIM3_IRQHandler
+ .text          0x08001a58       0xa0 obj\release\src\startup_stm32f0xx.o
+                0x08001a58                Reset_Handler
+                0x08001aa2                NMI_Handler
+                0x08001aa6                SVC_Handler
+                0x08001aa8                PendSV_Handler
+                0x08001aac                Default_Handler
+                0x08001aae                WWDG_IRQHandler
+                0x08001ab0                PVD_IRQHandler
+                0x08001ab2                RTC_IRQHandler
+                0x08001ab4                FLASH_IRQHandler
+                0x08001ab6                RCC_IRQHandler
+                0x08001ab8                EXTI0_1_IRQHandler
+                0x08001aba                EXTI2_3_IRQHandler
+                0x08001abc                EXTI4_15_IRQHandler
+                0x08001abe                TS_IRQHandler
+                0x08001ac0                DMA1_Channel1_IRQHandler
+                0x08001ac2                DMA1_Channel2_3_IRQHandler
+                0x08001ac4                DMA1_Channel4_5_IRQHandler
+                0x08001ac6                ADC1_COMP_IRQHandler
+                0x08001ac8                TIM1_BRK_UP_TRG_COM_IRQHandler
+                0x08001aca                TIM1_CC_IRQHandler
+                0x08001acc                TIM2_IRQHandler
+                0x08001ad0                TIM6_DAC_IRQHandler
+                0x08001ad2                TIM7_IRQHandler
+                0x08001ad4                TIM14_IRQHandler
+                0x08001ad6                TIM15_IRQHandler
+                0x08001ad8                TIM16_IRQHandler
+                0x08001ada                TIM17_IRQHandler
+                0x08001adc                I2C1_IRQHandler
+                0x08001ade                I2C2_IRQHandler
+                0x08001ae0                SPI1_IRQHandler
+                0x08001ae2                SPI2_IRQHandler
+                0x08001ae6                USART2_IRQHandler
+                0x08001ae8                USART3_4_IRQHandler
+                0x08001aea                CEC_IRQHandler
+                0x08001aec                USB_IRQHandler
+                0x08001aee                BootRAM
  .text.SystemInit
-                0x080018ec       0xb8 obj\release\src\system_stm32f0xx.o
-                0x080018ec                SystemInit
+                0x08001af8       0xb8 obj\release\src\system_stm32f0xx.o
+                0x08001af8                SystemInit
  .text.usart_init
-                0x080019a4       0x70 obj\release\src\usart.o
-                0x080019a4                usart_init
+                0x08001bb0       0x70 obj\release\src\usart.o
+                0x08001bb0                usart_init
  .text.usart_send_string
-                0x08001a14       0x28 obj\release\src\usart.o
-                0x08001a14                usart_send_string
+                0x08001c20       0x28 obj\release\src\usart.o
+                0x08001c20                usart_send_string
  .text.int_to_dec_string
-                0x08001a3c       0x60 obj\release\src\usart.o
-                0x08001a3c                int_to_dec_string
+                0x08001c48       0x60 obj\release\src\usart.o
+                0x08001c48                int_to_dec_string
  .text.usart_send_report
-                0x08001a9c      0x160 obj\release\src\usart.o
-                0x08001a9c                usart_send_report
+                0x08001ca8      0x160 obj\release\src\usart.o
+                0x08001ca8                usart_send_report
  .text.string_to_int
-                0x08001bfc       0x90 obj\release\src\usart.o
-                0x08001bfc                string_to_int
+                0x08001e08       0x90 obj\release\src\usart.o
+                0x08001e08                string_to_int
  .text.command_decode
-                0x08001c8c      0x2e4 obj\release\src\usart.o
-                0x08001c8c                command_decode
- .text          0x08001f70      0x1d4 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
-                0x08001f70                __divsi3
-                0x08001f70                __aeabi_idiv
-                0x0800213c                __aeabi_idivmod
- .text          0x08002144        0x4 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
-                0x08002144                __aeabi_idiv0
-                0x08002144                __aeabi_ldiv0
- .text.exit     0x08002148       0x2c c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-exit.o)
-                0x08002148                exit
+                0x08001e98      0x2e4 obj\release\src\usart.o
+                0x08001e98                command_decode
+ .text          0x0800217c      0x1d4 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
+                0x0800217c                __divsi3
+                0x0800217c                __aeabi_idiv
+                0x08002348                __aeabi_idivmod
+ .text          0x08002350        0x4 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+                0x08002350                __aeabi_idiv0
+                0x08002350                __aeabi_ldiv0
+ .text.exit     0x08002354       0x2c c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-exit.o)
+                0x08002354                exit
  .text.__libc_init_array
-                0x08002174       0x48 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-init.o)
-                0x08002174                __libc_init_array
- .text.memset   0x080021bc       0x10 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-memset.o)
-                0x080021bc                memset
- .text._exit    0x080021cc        0x4 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
-                0x080021cc                _exit
+                0x08002380       0x48 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-init.o)
+                0x08002380                __libc_init_array
+ .text.memset   0x080023c8       0x10 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-memset.o)
+                0x080023c8                memset
+ .text._exit    0x080023d8        0x4 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
+                0x080023d8                _exit
  *(.init)
- .init          0x080021d0        0x4 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crti.o
-                0x080021d0                _init
- .init          0x080021d4        0x8 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtn.o
+ .init          0x080023dc        0x4 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crti.o
+                0x080023dc                _init
+ .init          0x080023e0        0x8 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtn.o
  *(.fini)
- .fini          0x080021dc        0x4 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crti.o
-                0x080021dc                _fini
- .fini          0x080021e0        0x8 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtn.o
+ .fini          0x080023e8        0x4 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crti.o
+                0x080023e8                _fini
+ .fini          0x080023ec        0x8 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtn.o
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -521,65 +544,71 @@ LOAD c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eab
  *(.dtors)
  *(.rodata*)
  .rodata.calibrationMax
-                0x080021e8     0x194c obj\release\src\calibration.o
-                0x080021e8                calibrationMax
+                0x080023f4     0x194c obj\release\src\calibration.o
+                0x080023f4                calibrationMax
  .rodata.main.str1.4
-                0x08003b34       0x3f obj\release\src\main.o
- *fill*         0x08003b73        0x1 
+                0x08003d40       0x3f obj\release\src\main.o
+ *fill*         0x08003d7f        0x1 
  .rodata.menuShow.str1.4
-                0x08003b74       0x20 obj\release\src\menu.o
+                0x08003d80       0x20 obj\release\src\menu.o
+ .rodata.menuShowSpecial.str1.4
+                0x08003da0       0x72 obj\release\src\menu.o
+ *fill*         0x08003e12        0x2 
  .rodata.moveCursorLR.str1.4
-                0x08003b94       0x39 obj\release\src\menu.o
- *fill*         0x08003bcd        0x3 
+                0x08003e14       0x39 obj\release\src\menu.o
+ *fill*         0x08003e4d        0x3 
+ .rodata.moveCursorUD.str1.4
+                0x08003e50       0x46 obj\release\src\menu.o
+ *fill*         0x08003e96        0x2 
  .rodata.moveCursorUD
-                0x08003bd0       0xe8 obj\release\src\menu.o
+                0x08003e98       0xe8 obj\release\src\menu.o
  .rodata.int_to_dec_string.str1.4
-                0x08003cb8        0xb obj\release\src\usart.o
- *fill*         0x08003cc3        0x1 
+                0x08003f80        0xb obj\release\src\usart.o
+ *fill*         0x08003f8b        0x1 
  .rodata.usart_send_report.str1.4
-                0x08003cc4        0xd obj\release\src\usart.o
+                0x08003f8c        0xd obj\release\src\usart.o
                                  0x15 (size before relaxing)
- *fill*         0x08003cd1        0x3 
+ *fill*         0x08003f99        0x3 
  .rodata.command_decode.str1.4
-                0x08003cd4       0xea obj\release\src\usart.o
- *fill*         0x08003dbe        0x2 
+                0x08003f9c       0xea obj\release\src\usart.o
+ *fill*         0x08004086        0x2 
  .rodata._global_impure_ptr
-                0x08003dc0        0x4 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-impure.o)
-                0x08003dc0                _global_impure_ptr
+                0x08004088        0x4 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-impure.o)
+                0x08004088                _global_impure_ptr
  *(.eh_frame*)
- .eh_frame      0x08003dc4        0x0 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
- .eh_frame      0x08003dc4        0x4 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtend.o
+ .eh_frame      0x0800408c        0x0 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
+ .eh_frame      0x0800408c        0x4 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtend.o
 
-.glue_7         0x08003dc8        0x0
- .glue_7        0x08003dc8        0x0 linker stubs
+.glue_7         0x08004090        0x0
+ .glue_7        0x08004090        0x0 linker stubs
 
-.glue_7t        0x08003dc8        0x0
- .glue_7t       0x08003dc8        0x0 linker stubs
+.glue_7t        0x08004090        0x0
+ .glue_7t       0x08004090        0x0 linker stubs
 
-.vfp11_veneer   0x08003dc8        0x0
- .vfp11_veneer  0x08003dc8        0x0 linker stubs
+.vfp11_veneer   0x08004090        0x0
+ .vfp11_veneer  0x08004090        0x0 linker stubs
 
-.v4_bx          0x08003dc8        0x0
- .v4_bx         0x08003dc8        0x0 linker stubs
+.v4_bx          0x08004090        0x0
+ .v4_bx         0x08004090        0x0 linker stubs
 
-.iplt           0x08003dc8        0x0
- .iplt          0x08003dc8        0x0 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x08004090        0x0
+ .iplt          0x08004090        0x0 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08003dc8                __exidx_start = .
+                0x08004090                __exidx_start = .
 
-.ARM.exidx      0x08003dc8        0x8
+.ARM.exidx      0x08004090        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x08003dc8        0x8 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+ .ARM.exidx     0x08004090        0x8 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
                                  0x10 (size before relaxing)
-                0x08003dd0                __exidx_end = .
-                0x08003dd0                __etext = .
+                0x08004098                __exidx_end = .
+                0x08004098                __etext = .
 
-.rel.dyn        0x08003dd0        0x0
- .rel.iplt      0x08003dd0        0x0 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x08004098        0x0
+ .rel.iplt      0x08004098        0x0 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.data           0x20000000       0x70 load address 0x08003dd0
+.data           0x20000000       0x70 load address 0x08004098
                 0x20000000                __data_start__ = .
  *(vtable)
  *(.data*)
@@ -610,10 +639,10 @@ LOAD c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eab
                 0x20000070                . = ALIGN (0x4)
                 0x20000070                __data_end__ = .
 
-.igot.plt       0x20000070        0x0 load address 0x08003e40
+.igot.plt       0x20000070        0x0 load address 0x08004108
  .igot.plt      0x20000070        0x0 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.bss            0x20000070       0xfc load address 0x08003e40
+.bss            0x20000070      0x104 load address 0x08004108
                 0x20000070                __bss_start__ = .
  *(.bss*)
  .bss           0x20000070       0x1c c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/crtbegin.o
@@ -634,40 +663,46 @@ LOAD c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eab
  .bss.frequency_output
                 0x200000a0        0x4 obj\release\src\main.o
                 0x200000a0                frequency_output
+ .bss.mode      0x200000a4        0x1 obj\release\src\main.o
+                0x200000a4                mode
+ *fill*         0x200000a5        0x3 
  .bss.modulation
-                0x200000a4        0x4 obj\release\src\main.o
-                0x200000a4                modulation
- .bss.power     0x200000a8        0x4 obj\release\src\main.o
-                0x200000a8                power
- .bss.program   0x200000ac        0x4 obj\release\src\main.o
-                0x200000ac                program
+                0x200000a8        0x4 obj\release\src\main.o
+                0x200000a8                modulation
+ .bss.power     0x200000ac        0x4 obj\release\src\main.o
+                0x200000ac                power
+ .bss.program   0x200000b0        0x4 obj\release\src\main.o
+                0x200000b0                program
+ .bss.programSpecial
+                0x200000b4        0x4 obj\release\src\main.o
+                0x200000b4                programSpecial
  .bss.status_change
-                0x200000b0        0x4 obj\release\src\main.o
-                0x200000b0                status_change
+                0x200000b8        0x4 obj\release\src\main.o
+                0x200000b8                status_change
  .bss.denominator_i
-                0x200000b4        0x4 obj\release\src\modulation.o
-                0x200000b4                denominator_i
+                0x200000bc        0x4 obj\release\src\modulation.o
+                0x200000bc                denominator_i
  .bss.numerator
-                0x200000b8        0x4 obj\release\src\modulation.o
-                0x200000b8                numerator
+                0x200000c0        0x4 obj\release\src\modulation.o
+                0x200000c0                numerator
  *(COMMON)
- COMMON         0x200000bc       0x8c obj\release\src\main.o
-                0x200000bc                memory
-                0x20000134                buffer
- COMMON         0x20000148       0x24 obj\release\src\max2871.o
-                0x20000148                MAX2871_reg
-                0x2000016c                __bss_end__ = .
+ COMMON         0x200000c4       0x8c obj\release\src\main.o
+                0x200000c4                memory
+                0x2000013c                buffer
+ COMMON         0x20000150       0x24 obj\release\src\max2871.o
+                0x20000150                MAX2871_reg
+                0x20000174                __bss_end__ = .
 
-.heap           0x20000170        0x0
-                0x20000170                __end__ = .
-                0x20000170                end = __end__
+.heap           0x20000178        0x0
+                0x20000178                __end__ = .
+                0x20000178                end = __end__
  *(.heap*)
- .heap          0x20000170        0x0 obj\release\src\startup_stm32f0xx.o
-                0x20000170                __HeapLimit = .
+ .heap          0x20000178        0x0 obj\release\src\startup_stm32f0xx.o
+                0x20000178                __HeapLimit = .
 
-.stack_dummy    0x20000170      0x100
+.stack_dummy    0x20000178      0x100
  *(.stack)
- .stack         0x20000170      0x100 obj\release\src\startup_stm32f0xx.o
+ .stack         0x20000178      0x100 obj\release\src\startup_stm32f0xx.o
                 0x20001000                __StackTop = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20000f00                __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
                 0x20001000                PROVIDE (__stack = __StackTop)
@@ -682,6 +717,7 @@ LOAD obj\release\src\main.o
 LOAD obj\release\src\max2871.o
 LOAD obj\release\src\menu.o
 LOAD obj\release\src\modulation.o
+LOAD obj\release\src\special.o
 LOAD obj\release\src\startup_stm32f0xx.o
 LOAD obj\release\src\system_stm32f0xx.o
 LOAD obj\release\src\usart.o
@@ -770,19 +806,19 @@ LOAD linker stubs
  .comment       0x0000004c       0x4d obj\release\src\system_stm32f0xx.o
  .comment       0x0000004c       0x4d obj\release\src\usart.o
 
-.debug_info     0x00000000     0x7be3
+.debug_info     0x00000000     0x7eb0
  .debug_info    0x00000000      0x22a obj\release\src\attenuator.o
  .debug_info    0x0000022a      0x378 obj\release\src\calibration.o
  .debug_info    0x000005a2      0xe23 obj\release\src\delay.o
  .debug_info    0x000013c5      0xf23 obj\release\src\display.o
  .debug_info    0x000022e8      0xc2c obj\release\src\flash.o
- .debug_info    0x00002f14     0x1306 obj\release\src\main.o
- .debug_info    0x0000421a      0x5cb obj\release\src\max2871.o
- .debug_info    0x000047e5      0x906 obj\release\src\menu.o
- .debug_info    0x000050eb     0x1031 obj\release\src\modulation.o
- .debug_info    0x0000611c       0x26 obj\release\src\startup_stm32f0xx.o
- .debug_info    0x00006142      0x2f2 obj\release\src\system_stm32f0xx.o
- .debug_info    0x00006434     0x17af obj\release\src\usart.o
+ .debug_info    0x00002f14     0x132a obj\release\src\main.o
+ .debug_info    0x0000423e      0x5cb obj\release\src\max2871.o
+ .debug_info    0x00004809      0xbaf obj\release\src\menu.o
+ .debug_info    0x000053b8     0x1031 obj\release\src\modulation.o
+ .debug_info    0x000063e9       0x26 obj\release\src\startup_stm32f0xx.o
+ .debug_info    0x0000640f      0x2f2 obj\release\src\system_stm32f0xx.o
+ .debug_info    0x00006701     0x17af obj\release\src\usart.o
 
 .debug_abbrev   0x00000000     0x1b73
  .debug_abbrev  0x00000000      0x17d obj\release\src\attenuator.o
@@ -798,19 +834,19 @@ LOAD linker stubs
  .debug_abbrev  0x00001569      0x184 obj\release\src\system_stm32f0xx.o
  .debug_abbrev  0x000016ed      0x486 obj\release\src\usart.o
 
-.debug_loc      0x00000000     0x25c3
+.debug_loc      0x00000000     0x2695
  .debug_loc     0x00000000       0xc2 obj\release\src\attenuator.o
  .debug_loc     0x000000c2      0x4ff obj\release\src\calibration.o
  .debug_loc     0x000005c1      0x1d9 obj\release\src\display.o
  .debug_loc     0x0000079a      0x14c obj\release\src\flash.o
  .debug_loc     0x000008e6       0x83 obj\release\src\main.o
  .debug_loc     0x00000969      0x320 obj\release\src\max2871.o
- .debug_loc     0x00000c89      0x704 obj\release\src\menu.o
- .debug_loc     0x0000138d      0x184 obj\release\src\modulation.o
- .debug_loc     0x00001511      0x12f obj\release\src\system_stm32f0xx.o
- .debug_loc     0x00001640      0xf83 obj\release\src\usart.o
+ .debug_loc     0x00000c89      0x7d6 obj\release\src\menu.o
+ .debug_loc     0x0000145f      0x184 obj\release\src\modulation.o
+ .debug_loc     0x000015e3      0x12f obj\release\src\system_stm32f0xx.o
+ .debug_loc     0x00001712      0xf83 obj\release\src\usart.o
 
-.debug_aranges  0x00000000      0x2e0
+.debug_aranges  0x00000000      0x2e8
  .debug_aranges
                 0x00000000       0x30 obj\release\src\attenuator.o
  .debug_aranges
@@ -826,17 +862,17 @@ LOAD linker stubs
  .debug_aranges
                 0x00000180       0x40 obj\release\src\max2871.o
  .debug_aranges
-                0x000001c0       0x50 obj\release\src\menu.o
+                0x000001c0       0x58 obj\release\src\menu.o
  .debug_aranges
-                0x00000210       0x30 obj\release\src\modulation.o
+                0x00000218       0x30 obj\release\src\modulation.o
  .debug_aranges
-                0x00000240       0x20 obj\release\src\startup_stm32f0xx.o
+                0x00000248       0x20 obj\release\src\startup_stm32f0xx.o
  .debug_aranges
-                0x00000260       0x28 obj\release\src\system_stm32f0xx.o
+                0x00000268       0x28 obj\release\src\system_stm32f0xx.o
  .debug_aranges
-                0x00000288       0x58 obj\release\src\usart.o
+                0x00000290       0x58 obj\release\src\usart.o
 
-.debug_ranges   0x00000000      0x4e0
+.debug_ranges   0x00000000      0x530
  .debug_ranges  0x00000000       0x20 obj\release\src\attenuator.o
  .debug_ranges  0x00000020       0x80 obj\release\src\calibration.o
  .debug_ranges  0x000000a0       0x28 obj\release\src\delay.o
@@ -844,12 +880,12 @@ LOAD linker stubs
  .debug_ranges  0x00000110       0x68 obj\release\src\flash.o
  .debug_ranges  0x00000178       0x68 obj\release\src\main.o
  .debug_ranges  0x000001e0       0x30 obj\release\src\max2871.o
- .debug_ranges  0x00000210       0xa8 obj\release\src\menu.o
- .debug_ranges  0x000002b8       0x68 obj\release\src\modulation.o
- .debug_ranges  0x00000320       0x18 obj\release\src\system_stm32f0xx.o
- .debug_ranges  0x00000338      0x1a8 obj\release\src\usart.o
+ .debug_ranges  0x00000210       0xf8 obj\release\src\menu.o
+ .debug_ranges  0x00000308       0x68 obj\release\src\modulation.o
+ .debug_ranges  0x00000370       0x18 obj\release\src\system_stm32f0xx.o
+ .debug_ranges  0x00000388      0x1a8 obj\release\src\usart.o
 
-.debug_line     0x00000000     0x4141
+.debug_line     0x00000000     0x437c
  .debug_line    0x00000000      0x23f obj\release\src\attenuator.o
  .debug_line    0x0000023f      0x2d8 obj\release\src\calibration.o
  .debug_line    0x00000517      0x574 obj\release\src\delay.o
@@ -857,13 +893,13 @@ LOAD linker stubs
  .debug_line    0x00000f41      0x5db obj\release\src\flash.o
  .debug_line    0x0000151c      0x694 obj\release\src\main.o
  .debug_line    0x00001bb0      0x43a obj\release\src\max2871.o
- .debug_line    0x00001fea      0xb15 obj\release\src\menu.o
- .debug_line    0x00002aff      0x545 obj\release\src\modulation.o
- .debug_line    0x00003044       0x99 obj\release\src\startup_stm32f0xx.o
- .debug_line    0x000030dd      0x2a6 obj\release\src\system_stm32f0xx.o
- .debug_line    0x00003383      0xdbe obj\release\src\usart.o
+ .debug_line    0x00001fea      0xd50 obj\release\src\menu.o
+ .debug_line    0x00002d3a      0x545 obj\release\src\modulation.o
+ .debug_line    0x0000327f       0x99 obj\release\src\startup_stm32f0xx.o
+ .debug_line    0x00003318      0x2a6 obj\release\src\system_stm32f0xx.o
+ .debug_line    0x000035be      0xdbe obj\release\src\usart.o
 
-.debug_str      0x00000000      0xf13
+.debug_str      0x00000000      0xf37
  .debug_str     0x00000000      0x202 obj\release\src\attenuator.o
                                 0x250 (size before relaxing)
  .debug_str     0x00000202       0xd7 obj\release\src\calibration.o
@@ -874,22 +910,22 @@ LOAD linker stubs
                                 0x66f (size before relaxing)
  .debug_str     0x000007f2       0xe2 obj\release\src\flash.o
                                 0x6b6 (size before relaxing)
- .debug_str     0x000008d4      0x39f obj\release\src\main.o
-                                0xa9b (size before relaxing)
- .debug_str     0x00000c73       0xa8 obj\release\src\max2871.o
+ .debug_str     0x000008d4      0x3b3 obj\release\src\main.o
+                                0xaaf (size before relaxing)
+ .debug_str     0x00000c87       0xa8 obj\release\src\max2871.o
                                 0x2b7 (size before relaxing)
- .debug_str     0x00000d1b       0x62 obj\release\src\menu.o
-                                0x3c9 (size before relaxing)
- .debug_str     0x00000d7d       0x77 obj\release\src\modulation.o
+ .debug_str     0x00000d2f       0x72 obj\release\src\menu.o
+                                0x3ed (size before relaxing)
+ .debug_str     0x00000da1       0x77 obj\release\src\modulation.o
                                 0x8ea (size before relaxing)
- .debug_str     0x00000df4       0x26 obj\release\src\startup_stm32f0xx.o
+ .debug_str     0x00000e18       0x26 obj\release\src\startup_stm32f0xx.o
                                  0x8d (size before relaxing)
- .debug_str     0x00000e1a       0x7b obj\release\src\system_stm32f0xx.o
+ .debug_str     0x00000e3e       0x7b obj\release\src\system_stm32f0xx.o
                                 0x2a9 (size before relaxing)
- .debug_str     0x00000e95       0x7e obj\release\src\usart.o
+ .debug_str     0x00000eb9       0x7e obj\release\src\usart.o
                                 0x988 (size before relaxing)
 
-.debug_frame    0x00000000      0x68c
+.debug_frame    0x00000000      0x6ac
  .debug_frame   0x00000000       0x64 obj\release\src\attenuator.o
  .debug_frame   0x00000064       0x80 obj\release\src\calibration.o
  .debug_frame   0x000000e4       0x50 obj\release\src\delay.o
@@ -897,12 +933,12 @@ LOAD linker stubs
  .debug_frame   0x00000200       0x84 obj\release\src\flash.o
  .debug_frame   0x00000284       0x7c obj\release\src\main.o
  .debug_frame   0x00000300       0xb8 obj\release\src\max2871.o
- .debug_frame   0x000003b8       0xc4 obj\release\src\menu.o
- .debug_frame   0x0000047c       0x54 obj\release\src\modulation.o
- .debug_frame   0x000004d0       0x38 obj\release\src\system_stm32f0xx.o
- .debug_frame   0x00000508       0xd0 obj\release\src\usart.o
- .debug_frame   0x000005d8       0x20 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
- .debug_frame   0x000005f8       0x28 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-exit.o)
- .debug_frame   0x00000620       0x2c c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-init.o)
- .debug_frame   0x0000064c       0x20 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-memset.o)
- .debug_frame   0x0000066c       0x20 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
+ .debug_frame   0x000003b8       0xe4 obj\release\src\menu.o
+ .debug_frame   0x0000049c       0x54 obj\release\src\modulation.o
+ .debug_frame   0x000004f0       0x38 obj\release\src\system_stm32f0xx.o
+ .debug_frame   0x00000528       0xd0 obj\release\src\usart.o
+ .debug_frame   0x000005f8       0x20 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
+ .debug_frame   0x00000618       0x28 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x00000640       0x2c c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x0000066c       0x20 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000068c       0x20 c:/program files (x86)/embitz/2.62/share/armgcc/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)

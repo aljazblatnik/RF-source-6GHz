@@ -52,7 +52,6 @@ void doSpecialMode(char mode){
             MAX2871_set_frequency(set_frequency);
             delay_ms(1);
             break;
-    }
     case 3:
             if(step == 0){
                 set_frequency = 1563170;
@@ -68,11 +67,11 @@ void doSpecialMode(char mode){
             MAX2871_set_frequency(set_frequency);
             delay_ms(1);
             break;
-    }
     default:
             if(step != 1){
                 MAX2871_set_frequency(1575420);
                 step = 1;
             }
             break;
+    }
 }
